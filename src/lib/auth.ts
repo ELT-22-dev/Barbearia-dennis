@@ -1,1 +1,36 @@
-aW1wb3J0IHsgcXVlcnlPcHRpb25zIH0gZnJvbSAiQHRhbnN0YWNrL3JlYWN0LXF1ZXJ5IjsKaW1wb3J0IHsgc3VwYWJhc2UgfSBmcm9tICJAL2ludGVncmF0aW9ucy9zdXBhYmFzZS9jbGllbnQiOwoKZXhwb3J0IGNvbnN0IExPR0lOX09GRiA9IHRydWU7CgpleHBvcnQgY29uc3QgQURNSU5fRU1BSUwgPSAienVsbWF6ZXJuYTIwMjBAZ21haWwuY29tIjsKCmV4cG9ydCBjb25zdCBpc0FkbWluRW1haWwgPSAoZW1haWw6IHN0cmluZykgPT4gZW1haWwudHJpbSgpLnRvTG93ZXJDYXNlKCkgPT09IEFETUlOX0VNQUlMOwoKZXhwb3J0IHR5cGUgTWUgPSB7CiAgaWQ6IHN0cmluZzsKICBlbWFpbDogc3RyaW5nOwogIGlzQWRtaW46IGJvb2xlYW47CiAgYmFyYmVyOiB7IGlkOiBzdHJpbmc7IG5hbWU6IHN0cmluZyB9IHwgbnVsbDsKfTsKCmV4cG9ydCBjb25zdCBtZVF1ZXJ5ID0gcXVlcnlPcHRpb25zKHsKICBxdWVyeUtleTogWyJtZSJdLAogIHF1ZXJ5Rm46IGFzeW5jICgpOiBQcm9taXNlPE1lIHwgbnVsbD4gPT4gewogICAgLy8gTG9naW4gdGVtcG9yYXJpbHkgb2ZmOiBvcGVuLCBmdWxsIGFjY2VzcyBmb3IgZXZlcnlvbmUuCiAgICBpZiAoTE9HSU5fT0ZGKSByZXR1cm4geyBpZDogIiIsIGVtYWlsOiAiIiwgaXNBZG1pbjogdHJ1ZSwgYmFyYmVyOiBudWxsIH07CiAgICBjb25zdCB7IGRhdGEgfSA9IGF3YWl0IHN1cGFiYXNlLmF1dGguZ2V0VXNlcigpOwogICAgY29uc3QgdXNlciA9IGRhdGEudXNlcjsKICAgIGlmICghdXNlcikgcmV0dXJuIG51bGw7CiAgICBjb25zdCBbcm9sZXMsIGJhcmJlcl0gPSBhd2FpdCBQcm9taXNlLmFsbChbCiAgICAgIHN1cGFiYXNlLmZyb20oInVzZXJfcm9sZXMiKS5zZWxlY3QoInJvbGUiKS5lcSgidXNlcl9pZCIsIHVzZXIuaWQpLAogICAgICBzdXBhYmFzZS5mcm9tKCJiYXJiZXJzIikuc2VsZWN0KCJpZCwgbmFtZSIpLmVxKCJ1c2VyX2lkIiwgdXNlci5pZCkubWF5YmVTaW5nbGUoKSwKICAgIF0pOwogICAgcmV0dXJuIHsKICAgICAgaWQ6IHVzZXIuaWQsCiAgICAgIGVtYWlsOiB1c2VyLmVtYWlsID8/ICIiLAogICAgICBpc0FkbWluOiAhIXJvbGVzLmRhdGE/LnNvbWUoKHIpID0+IHIucm9sZSA9PT0gImFkbWluIiksCiAgICAgIGJhcmJlcjogYmFyYmVyLmRhdGEgPz8gbnVsbCwKICAgIH07CiAgfSwKfSk7Cg==
+import { queryOptions } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+
+export const LOGIN_OFF = true;
+
+export const ADMIN_EMAIL = "zulmazerna2020@gmail.com";
+
+export const isAdminEmail = (email: string) => email.trim().toLowerCase() === ADMIN_EMAIL;
+
+export type Me = {
+  id: string;
+  email: string;
+  isAdmin: boolean;
+  barber: { id: string; name: string } | null;
+};
+
+export const meQuery = queryOptions({
+  queryKey: ["me"],
+  queryFn: async (): Promise<Me | null> => {
+    // Login temporarily off: open, full access for everyone.
+    if (LOGIN_OFF) return { id: "", email: "", isAdmin: true, barber: null };
+    const { data } = await supabase.auth.getUser();
+    const user = data.user;
+    if (!user) return null;
+    const [roles, barber] = await Promise.all([
+      supabase.from("user_roles").select("role").eq("user_id", user.id),
+      supabase.from("barbers").select("id, name").eq("user_id", user.id).maybeSingle(),
+    ]);
+    return {
+      id: user.id,
+      email: user.email ?? "",
+      isAdmin: !!roles.data?.some((r) => r.role === "admin"),
+      barber: barber.data ?? null,
+    };
+  },
+});

@@ -1,1 +1,94 @@
-aW1wb3J0IHsgcXVlcnlPcHRpb25zIH0gZnJvbSAiQHRhbnN0YWNrL3JlYWN0LXF1ZXJ5IjsKaW1wb3J0IHsgc3VwYWJhc2UgfSBmcm9tICJAL2ludGVncmF0aW9ucy9zdXBhYmFzZS9jbGllbnQiOwoKZXhwb3J0IGNvbnN0IFNIQVJFX0JBUkJFUiA9IDAuNTsKCmV4cG9ydCB0eXBlIFBheW1lbnRNZXRob2QgPSAiZGluaGVpcm8iIHwgInBpeCIgfCAiY2FydGFvIjsKZXhwb3J0IGNvbnN0IFBBWU1FTlRfTEFCRUxTOiBSZWNvcmQ8UGF5bWVudE1ldGhvZCwgc3RyaW5nPiA9IHsKICBkaW5oZWlybzogIkRpbmhlaXJvIiwKICBwaXg6ICJQaXgiLAogIGNhcnRhbzogIkNhcnTDo28iLAp9OwoKZXhwb3J0IGZ1bmN0aW9uIHNwbGl0UHJpY2UocHJpY2U6IG51bWJlcikgewogIGNvbnN0IGJhcmJlciA9IE1hdGgucm91bmQocHJpY2UgKiBTSEFSRV9CQVJCRVIgKiAxMDApIC8gMTAwOwogIHJldHVybiB7IGJhcmJlciwgc2hvcDogTWF0aC5yb3VuZCgocHJpY2UgLSBiYXJiZXIpICogMTAwKSAvIDEwMCB9Owp9CgpleHBvcnQgdHlwZSBBcHB0ID0gewogIGlkOiBzdHJpbmc7CiAgYmFyYmVyX2lkOiBzdHJpbmcgfCBudWxsOwogIGJhcmJlcl9uYW1lOiBzdHJpbmc7CiAgc2VydmljZV9uYW1lOiBzdHJpbmc7CiAgcHJpY2U6IG51bWJlcjsKICBwYXltZW50X21ldGhvZDogc3RyaW5nOwogIGNyZWF0ZWRfYXQ6IHN0cmluZzsKfTsKCmV4cG9ydCBmdW5jdGlvbiBzdW1tYXJpemUoYXBwdHM6IEFwcHRbXSkgewogIGxldCB0b3RhbCA9IDA7CiAgbGV0IHNob3AgPSAwOwogIGNvbnN0IGJ5QmFyYmVyOiBSZWNvcmQ8c3RyaW5nLCB7IG5hbWU6IHN0cmluZzsgY291bnQ6IG51bWJlcjsgZWFybmVkOiBudW1iZXIgfT4gPSB7fTsKICBjb25zdCBieVBheW1lbnQ6IFJlY29yZDxQYXltZW50TWV0aG9kLCBudW1iZXI+ID0geyBkaW5oZWlybzogMCwgcGl4OiAwLCBjYXJ0YW86IDAgfTsKICBmb3IgKGNvbnN0IGEgb2YgYXBwdHMpIHsKICAgIGNvbnN0IHByaWNlID0gTnVtYmVyKGEucHJpY2UpOwogICAgY29uc3QgcyA9IHNwbGl0UHJpY2UocHJpY2UpOwogICAgdG90YWwgKz0gcHJpY2U7CiAgICBzaG9wICs9IHMuc2hvcDsKICAgIGNvbnN0IGtleSA9IGEuYmFyYmVyX2lkID8/IGEuYmFyYmVyX25hbWU7CiAgICBieUJhcmJlcltrZXldID8/PSB7IG5hbWU6IGEuYmFyYmVyX25hbWUsIGNvdW50OiAwLCBlYXJuZWQ6IDAgfTsKICAgIGJ5QmFyYmVyW2tleV0uY291bnQgKz0gMTsKICAgIGJ5QmFyYmVyW2tleV0uZWFybmVkICs9IHMuYmFyYmVyOwogICAgaWYgKGEucGF5bWVudF9tZXRob2QgaW4gYnlQYXltZW50KSBieVBheW1lbnRbYS5wYXltZW50X21ldGhvZCBhcyBQYXltZW50TWV0aG9kXSArPSBwcmljZTsKICB9CiAgcmV0dXJuIHsgdG90YWwsIHNob3AsIGNvdW50OiBhcHB0cy5sZW5ndGgsIGJ5QmFyYmVyLCBieVBheW1lbnQgfTsKfQoKZXhwb3J0IGNvbnN0IGJybCA9IChuOiBudW1iZXIpID0+CiAgbi50b0xvY2FsZVN0cmluZygicHQtQlIiLCB7IHN0eWxlOiAiY3VycmVuY3kiLCBjdXJyZW5jeTogIkJSTCIgfSk7CgpleHBvcnQgY29uc3QgYmFyYmVyc1F1ZXJ5ID0gcXVlcnlPcHRpb25zKHsKICBxdWVyeUtleTogWyJiYXJiZXJzIl0sCiAgcXVlcnlGbjogYXN5bmMgKCkgPT4gewogICAgY29uc3QgeyBkYXRhLCBlcnJvciB9ID0gYXdhaXQgc3VwYWJhc2UuZnJvbSgiYmFyYmVycyIpLnNlbGVjdCgiKiIpLm9yZGVyKCJwb3NpdGlvbiIpOwogICAgaWYgKGVycm9yKSB0aHJvdyBlcnJvcjsKICAgIHJldHVybiBkYXRhOwogIH0sCn0pOwoKZXhwb3J0IGNvbnN0IHNlcnZpY2VzUXVlcnkgPSBxdWVyeU9wdGlvbnMoewogIHF1ZXJ5S2V5OiBbInNlcnZpY2VzIl0sCiAgcXVlcnlGbjogYXN5bmMgKCkgPT4gewogICAgY29uc3QgeyBkYXRhLCBlcnJvciB9ID0gYXdhaXQgc3VwYWJhc2UKICAgICAgLmZyb20oInNlcnZpY2VzIikKICAgICAgLnNlbGVjdCgiKiIpCiAgICAgIC5lcSgiYWN0aXZlIiwgdHJ1ZSkKICAgICAgLm9yZGVyKCJwcmljZSIsIHsgYXNjZW5kaW5nOiBmYWxzZSB9KTsKICAgIGlmIChlcnJvcikgdGhyb3cgZXJyb3I7CiAgICByZXR1cm4gZGF0YTsKICB9LAp9KTsKCmV4cG9ydCB0eXBlIFBlcmlvZCA9ICJob2plIiB8ICJzZW1hbmEiIHwgIm1lcyI7CgpleHBvcnQgZnVuY3Rpb24gcGVyaW9kU3RhcnQocGVyaW9kOiBQZXJpb2QsIG5vdyA9IG5ldyBEYXRlKCkpIHsKICBjb25zdCBkID0gbmV3IERhdGUobm93KTsKICBkLnNldEhvdXJzKDAsIDAsIDAsIDApOwogIGlmIChwZXJpb2QgPT09ICJzZW1hbmEiKSBkLnNldERhdGUoZC5nZXREYXRlKCkgLSAoKGQuZ2V0RGF5KCkgKyA2KSAlIDcpKTsKICBpZiAocGVyaW9kID09PSAibWVzIikgZC5zZXREYXRlKDEpOwogIHJldHVybiBkOwp9CgpleHBvcnQgY29uc3QgYXBwb2ludG1lbnRzUXVlcnkgPSAocGVyaW9kOiBQZXJpb2QpID0+CiAgcXVlcnlPcHRpb25zKHsKICAgIHF1ZXJ5S2V5OiBbImFwcG9pbnRtZW50cyIsIHBlcmlvZF0sCiAgICBxdWVyeUZuOiBhc3luYyAoKSA9PiB7CiAgICAgIGNvbnN0IHsgZGF0YSwgZXJyb3IgfSA9IGF3YWl0IHN1cGFiYXNlCiAgICAgICAgLmZyb20oImFwcG9pbnRtZW50cyIpCiAgICAgICAgLnNlbGVjdCgiKiIpCiAgICAgICAgLmd0ZSgiY3JlYXRlZF9hdCIsIHBlcmlvZFN0YXJ0KHBlcmlvZCkudG9JU09TdHJpbmcoKSkKICAgICAgICAub3JkZXIoImNyZWF0ZWRfYXQiLCB7IGFzY2VuZGluZzogZmFsc2UgfSk7CiAgICAgIGlmIChlcnJvcikgdGhyb3cgZXJyb3I7CiAgICAgIHJldHVybiBkYXRhIGFzIEFwcHRbXTsKICAgIH0sCiAgfSk7Cg==
+import { queryOptions } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+
+export const SHARE_BARBER = 0.5;
+
+export type PaymentMethod = "dinheiro" | "pix" | "cartao";
+export const PAYMENT_LABELS: Record<PaymentMethod, string> = {
+  dinheiro: "Dinheiro",
+  pix: "Pix",
+  cartao: "Cartão",
+};
+
+export function splitPrice(price: number) {
+  const barber = Math.round(price * SHARE_BARBER * 100) / 100;
+  return { barber, shop: Math.round((price - barber) * 100) / 100 };
+}
+
+export type Appt = {
+  id: string;
+  barber_id: string | null;
+  barber_name: string;
+  service_name: string;
+  price: number;
+  payment_method: string;
+  created_at: string;
+};
+
+export function summarize(appts: Appt[]) {
+  let total = 0;
+  let shop = 0;
+  const byBarber: Record<string, { name: string; count: number; earned: number }> = {};
+  const byPayment: Record<PaymentMethod, number> = { dinheiro: 0, pix: 0, cartao: 0 };
+  for (const a of appts) {
+    const price = Number(a.price);
+    const s = splitPrice(price);
+    total += price;
+    shop += s.shop;
+    const key = a.barber_id ?? a.barber_name;
+    byBarber[key] ??= { name: a.barber_name, count: 0, earned: 0 };
+    byBarber[key].count += 1;
+    byBarber[key].earned += s.barber;
+    if (a.payment_method in byPayment) byPayment[a.payment_method as PaymentMethod] += price;
+  }
+  return { total, shop, count: appts.length, byBarber, byPayment };
+}
+
+export const brl = (n: number) =>
+  n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+
+export const barbersQuery = queryOptions({
+  queryKey: ["barbers"],
+  queryFn: async () => {
+    const { data, error } = await supabase.from("barbers").select("*").order("position");
+    if (error) throw error;
+    return data;
+  },
+});
+
+export const servicesQuery = queryOptions({
+  queryKey: ["services"],
+  queryFn: async () => {
+    const { data, error } = await supabase
+      .from("services")
+      .select("*")
+      .eq("active", true)
+      .order("price", { ascending: false });
+    if (error) throw error;
+    return data;
+  },
+});
+
+export type Period = "hoje" | "semana" | "mes";
+
+export function periodStart(period: Period, now = new Date()) {
+  const d = new Date(now);
+  d.setHours(0, 0, 0, 0);
+  if (period === "semana") d.setDate(d.getDate() - ((d.getDay() + 6) % 7));
+  if (period === "mes") d.setDate(1);
+  return d;
+}
+
+export const appointmentsQuery = (period: Period) =>
+  queryOptions({
+    queryKey: ["appointments", period],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("appointments")
+        .select("*")
+        .gte("created_at", periodStart(period).toISOString())
+        .order("created_at", { ascending: false });
+      if (error) throw error;
+      return data as Appt[];
+    },
+  });

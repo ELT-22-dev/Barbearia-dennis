@@ -1,1 +1,142 @@
-aW1wb3J0IHsgY3JlYXRlRmlsZVJvdXRlLCByZWRpcmVjdCB9IGZyb20gIkB0YW5zdGFjay9yZWFjdC1yb3V0ZXIiOwppbXBvcnQgeyBCYXJiZXJBY2Nlc3MgfSBmcm9tICJAL2NvbXBvbmVudHMvQmFyYmVyQWNjZXNzIjsKaW1wb3J0IHsgdXNlUXVlcnlDbGllbnQsIHVzZVN1c3BlbnNlUXVlcnkgfSBmcm9tICJAdGFuc3RhY2svcmVhY3QtcXVlcnkiOwppbXBvcnQgeyB1c2VTdGF0ZSB9IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgdG9hc3QgfSBmcm9tICJzb25uZXIiOwppbXBvcnQgeyBQbHVzLCBUcmFzaDIgfSBmcm9tICJsdWNpZGUtcmVhY3QiOwppbXBvcnQgeyBzdXBhYmFzZSB9IGZyb20gIkAvaW50ZWdyYXRpb25zL3N1cGFiYXNlL2NsaWVudCI7CmltcG9ydCB7IGJhcmJlcnNRdWVyeSwgc2VydmljZXNRdWVyeSB9IGZyb20gIkAvbGliL2JhcmJlciI7CgpleHBvcnQgY29uc3QgUm91dGUgPSBjcmVhdGVGaWxlUm91dGUoIi9fYXV0aGVudGljYXRlZC9hanVzdGVzIikoewogIGhlYWQ6ICgpID0+ICh7CiAgICBtZXRhOiBbCiAgICAgIHsgdGl0bGU6ICJBanVzdGVzIOKAlCBCYXJiZWFyaWEiIH0sCiAgICAgIHsgbmFtZTogImRlc2NyaXB0aW9uIiwgY29udGVudDogIkVkaXRlIG9zIG5vbWVzIGRvcyBiYXJiZWlyb3MsIHNlcnZpw6dvcyBlIHByZcOnb3MuIiB9LAogICAgICB7IHByb3BlcnR5OiAib2c6dGl0bGUiLCBjb250ZW50OiAiQWp1c3RlcyDigJQgQmFyYmVhcmlhIiB9LAogICAgICB7IHByb3BlcnR5OiAib2c6ZGVzY3JpcHRpb24iLCBjb250ZW50OiAiRWRpdGUgYmFyYmVpcm9zLCBzZXJ2acOnb3MgZSBwcmXDp29zLiIgfSwKICAgIF0sCiAgfSksCiAgYmVmb3JlTG9hZDogKHsgY29udGV4dCB9KSA9PiB7CiAgICBpZiAoIWNvbnRleHQubWU/LmlzQWRtaW4pIHRocm93IHJlZGlyZWN0KHsgdG86ICIvIiB9KTsKICB9LAogIGxvYWRlcjogKHsgY29udGV4dCB9KSA9PgogICAgUHJvbWlzZS5hbGwoWwogICAgICBjb250ZXh0LnF1ZXJ5Q2xpZW50LmVuc3VyZVF1ZXJ5RGF0YShiYXJiZXJzUXVlcnkpLAogICAgICBjb250ZXh0LnF1ZXJ5Q2xpZW50LmVuc3VyZVF1ZXJ5RGF0YShzZXJ2aWNlc1F1ZXJ5KSwKICAgIF0pLAogIGNvbXBvbmVudDogU2V0dGluZ3MsCiAgZXJyb3JDb21wb25lbnQ6ICh7IGVycm9yIH0pID0+IDxwIGNsYXNzTmFtZT0idGV4dC1kZXN0cnVjdGl2ZSI+e2Vycm9yIGluc3RhbmNlb2YgRXJyb3IgPyBlcnJvci5tZXNzYWdlIDogU3RyaW5nKGVycm9yKX08L3A+LAogIG5vdEZvdW5kQ29tcG9uZW50OiAoKSA9PiA8cD5Ow6NvIGVuY29udHJhZG8uPC9wPiwKfSk7Cgpjb25zdCBpbnB1dCA9CiAgInctZnVsbCByb3VuZGVkLXhsIGJvcmRlciBib3JkZXItaW5wdXQgYmctY2FyZCBweC0zIHB5LTIuNSB0ZXh0LWJhc2Ugb3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1wcmltYXJ5IjsKCmZ1bmN0aW9uIFNldHRpbmdzKCkgewogIGNvbnN0IHsgZGF0YTogYmFyYmVycyB9ID0gdXNlU3VzcGVuc2VRdWVyeShiYXJiZXJzUXVlcnkpOwogIGNvbnN0IHsgZGF0YTogc2VydmljZXMgfSA9IHVzZVN1c3BlbnNlUXVlcnkoc2VydmljZXNRdWVyeSk7CiAgY29uc3QgcWMgPSB1c2VRdWVyeUNsaWVudCgpOwogIGNvbnN0IFtuZXdOYW1lLCBzZXROZXdOYW1lXSA9IHVzZVN0YXRlKCIiKTsKICBjb25zdCBbbmV3UHJpY2UsIHNldE5ld1ByaWNlXSA9IHVzZVN0YXRlKCIiKTsKCiAgY29uc3QgZG9uZSA9IChrZXk6IHN0cmluZywgbXNnID0gIlNhbHZvIikgPT4gewogICAgdG9hc3Quc3VjY2Vzcyhtc2cpOwogICAgcWMuaW52YWxpZGF0ZVF1ZXJpZXMoeyBxdWVyeUtleTogW2tleV0gfSk7CiAgfTsKCiAgY29uc3QgcmVuYW1lQmFyYmVyID0gYXN5bmMgKGlkOiBzdHJpbmcsIG5hbWU6IHN0cmluZykgPT4gewogICAgaWYgKCFuYW1lLnRyaW0oKSkgcmV0dXJuOwogICAgY29uc3QgeyBlcnJvciB9ID0gYXdhaXQgc3VwYWJhc2UuZnJvbSgiYmFyYmVycyIpLnVwZGF0ZSh7IG5hbWU6IG5hbWUudHJpbSgpIH0pLmVxKCJpZCIsIGlkKTsKICAgIGVycm9yID8gdG9hc3QuZXJyb3IoZXJyb3IubWVzc2FnZSkgOiBkb25lKCJiYXJiZXJzIik7CiAgfTsKICBjb25zdCB1cGRhdGVTZXJ2aWNlID0gYXN5bmMgKGlkOiBzdHJpbmcsIHBhdGNoOiB7IG5hbWU/OiBzdHJpbmc7IHByaWNlPzogbnVtYmVyIH0pID0+IHsKICAgIGNvbnN0IHsgZXJyb3IgfSA9IGF3YWl0IHN1cGFiYXNlLmZyb20oInNlcnZpY2VzIikudXBkYXRlKHBhdGNoKS5lcSgiaWQiLCBpZCk7CiAgICBlcnJvciA/IHRvYXN0LmVycm9yKGVycm9yLm1lc3NhZ2UpIDogZG9uZSgic2VydmljZXMiKTsKICB9OwogIGNvbnN0IHJlbW92ZVNlcnZpY2UgPSBhc3luYyAoaWQ6IHN0cmluZykgPT4gewogICAgaWYgKCFjb25maXJtKCJSZW1vdmVyIGVzdGUgc2VydmnDp28/IikpIHJldHVybjsKICAgIGNvbnN0IHsgZXJyb3IgfSA9IGF3YWl0IHN1cGFiYXNlLmZyb20oInNlcnZpY2VzIikudXBkYXRlKHsgYWN0aXZlOiBmYWxzZSB9KS5lcSgiaWQiLCBpZCk7CiAgICBlcnJvciA/IHRvYXN0LmVycm9yKGVycm9yLm1lc3NhZ2UpIDogZG9uZSgic2VydmljZXMiLCAiUmVtb3ZpZG8iKTsKICB9OwogIGNvbnN0IGFkZFNlcnZpY2UgPSBhc3luYyAoKSA9PiB7CiAgICBjb25zdCBwcmljZSA9IE51bWJlcihuZXdQcmljZS5yZXBsYWNlKCIsIiwgIi4iKSk7CiAgICBpZiAoIW5ld05hbWUudHJpbSgpIHx8ICFwcmljZSkgeyB0b2FzdC5lcnJvcigiUHJlZW5jaGEgbm9tZSBlIHByZcOnbyIpOyByZXR1cm47IH0KICAgIGNvbnN0IHsgZXJyb3IgfSA9IGF3YWl0IHN1cGFiYXNlLmZyb20oInNlcnZpY2VzIikuaW5zZXJ0KHsgbmFtZTogbmV3TmFtZS50cmltKCksIHByaWNlIH0pOwogICAgaWYgKGVycm9yKSB7IHRvYXN0LmVycm9yKGVycm9yLm1lc3NhZ2UpOyByZXR1cm47IH0KICAgIHNldE5ld05hbWUoIiIpOwogICAgc2V0TmV3UHJpY2UoIiIpOwogICAgZG9uZSgic2VydmljZXMiLCAiU2VydmnDp28gYWRpY2lvbmFkbyIpOwogIH07CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0xMCI+CiAgICAgIDxoMSBjbGFzc05hbWU9ImZvbnQtZGlzcGxheSB0ZXh0LTN4bCBmb250LXNlbWlib2xkIHRyYWNraW5nLXRpZ2h0Ij5BanVzdGVzPC9oMT4KCiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT0ic3BhY2UteS0zIj4KICAgICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXNtIGZvbnQtbWVkaXVtIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciB0ZXh0LW11dGVkLWZvcmVncm91bmQiPkJhcmJlaXJvczwvaDI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ2FwLTMgc206Z3JpZC1jb2xzLTMiPgogICAgICAgICAge2JhcmJlcnMubWFwKChiKSA9PiAoCiAgICAgICAgICAgIDxpbnB1dAogICAgICAgICAgICAgIGtleT17Yi5pZH0KICAgICAgICAgICAgICBkZWZhdWx0VmFsdWU9e2IubmFtZX0KICAgICAgICAgICAgICBjbGFzc05hbWU9e2lucHV0fQogICAgICAgICAgICAgIG9uQmx1cj17KGUpID0+IGUudGFyZ2V0LnZhbHVlICE9PSBiLm5hbWUgJiYgcmVuYW1lQmFyYmVyKGIuaWQsIGUudGFyZ2V0LnZhbHVlKX0KICAgICAgICAgICAgLz4KICAgICAgICAgICkpfQogICAgICAgIDwvZGl2PgogICAgICA8L3NlY3Rpb24+CgogICAgICA8QmFyYmVyQWNjZXNzIGJhcmJlcnM9e2JhcmJlcnN9IC8+CgogICAgICA8c2VjdGlvbiBjbGFzc05hbWU9InNwYWNlLXktMyI+CiAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC1zbSBmb250LW1lZGl1bSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj4KICAgICAgICAgIFNlcnZpw6dvcyBlIHByZcOnb3MgKFIkKQogICAgICAgIDwvaDI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMiI+CiAgICAgICAgICB7c2VydmljZXMubWFwKChzKSA9PiAoCiAgICAgICAgICAgIDxkaXYga2V5PXtzLmlkfSBjbGFzc05hbWU9ImZsZXggZ2FwLTIiPgogICAgICAgICAgICAgIDxpbnB1dAogICAgICAgICAgICAgICAgZGVmYXVsdFZhbHVlPXtzLm5hbWV9CiAgICAgICAgICAgICAgICBjbGFzc05hbWU9e2lucHV0fQogICAgICAgICAgICAgICAgb25CbHVyPXsoZSkgPT4gZS50YXJnZXQudmFsdWUgIT09IHMubmFtZSAmJiBlLnRhcmdldC52YWx1ZS50cmltKCkgJiYgdXBkYXRlU2VydmljZShzLmlkLCB7IG5hbWU6IGUudGFyZ2V0LnZhbHVlLnRyaW0oKSB9KX0KICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgIDxpbnB1dAogICAgICAgICAgICAgICAgZGVmYXVsdFZhbHVlPXtTdHJpbmcocy5wcmljZSl9CiAgICAgICAgICAgICAgICBpbnB1dE1vZGU9ImRlY2ltYWwiCiAgICAgICAgICAgICAgICBjbGFzc05hbWU9e2Ake2lucHV0fSB3LTI4YH0KICAgICAgICAgICAgICAgIG9uQmx1cj17KGUpID0+IHsKICAgICAgICAgICAgICAgICAgY29uc3QgdiA9IE51bWJlcihlLnRhcmdldC52YWx1ZS5yZXBsYWNlKCIsIiwgIi4iKSk7CiAgICAgICAgICAgICAgICAgIGlmICh2ICYmIHYgIT09IE51bWJlcihzLnByaWNlKSkgdXBkYXRlU2VydmljZShzLmlkLCB7IHByaWNlOiB2IH0pOwogICAgICAgICAgICAgICAgfX0KICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgICAgIGFyaWEtbGFiZWw9IlJlbW92ZXIiCiAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiByZW1vdmVTZXJ2aWNlKHMuaWQpfQogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIHB4LTMgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIGhvdmVyOmJnLXNlY29uZGFyeSBob3Zlcjp0ZXh0LWRlc3RydWN0aXZlIgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIDxUcmFzaDIgY2xhc3NOYW1lPSJoLTQgdy00IiAvPgogICAgICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICkpfQogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZ2FwLTIgcHQtMiI+CiAgICAgICAgICAgIDxpbnB1dCBwbGFjZWhvbGRlcj0iTm92byBzZXJ2acOnbyIgdmFsdWU9e25ld05hbWV9IG9uQ2hhbmdlPXsoZSkgPT4gc2V0TmV3TmFtZShlLnRhcmdldC52YWx1ZSl9IGNsYXNzTmFtZT17aW5wdXR9IC8+CiAgICAgICAgICAgIDxpbnB1dAogICAgICAgICAgICAgIHBsYWNlaG9sZGVyPSJQcmXDp28iCiAgICAgICAgICAgICAgaW5wdXRNb2RlPSJkZWNpbWFsIgogICAgICAgICAgICAgIHZhbHVlPXtuZXdQcmljZX0KICAgICAgICAgICAgICBvbkNoYW5nZT17KGUpID0+IHNldE5ld1ByaWNlKGUudGFyZ2V0LnZhbHVlKX0KICAgICAgICAgICAgICBjbGFzc05hbWU9e2Ake2lucHV0fSB3LTI4YH0KICAgICAgICAgICAgLz4KICAgICAgICAgICAgPGJ1dHRvbgogICAgICAgICAgICAgIG9uQ2xpY2s9e2FkZFNlcnZpY2V9CiAgICAgICAgICAgICAgYXJpYS1sYWJlbD0iQWRpY2lvbmFyIgogICAgICAgICAgICAgIGNsYXNzTmFtZT0icm91bmRlZC14bCBiZy1wcmltYXJ5IHB4LTMgdGV4dC1wcmltYXJ5LWZvcmVncm91bmQiCiAgICAgICAgICAgID4KICAgICAgICAgICAgICA8UGx1cyBjbGFzc05hbWU9ImgtNSB3LTUiIC8+CiAgICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvc2VjdGlvbj4KICAgIDwvZGl2PgogICk7Cn0K
+import { createFileRoute, redirect } from "@tanstack/react-router";
+import { BarberAccess } from "@/components/BarberAccess";
+import { useQueryClient, useSuspenseQuery } from "@tanstack/react-query";
+import { useState } from "react";
+import { toast } from "sonner";
+import { Plus, Trash2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { barbersQuery, servicesQuery } from "@/lib/barber";
+
+export const Route = createFileRoute("/_authenticated/ajustes")({
+  head: () => ({
+    meta: [
+      { title: "Ajustes — Barbearia" },
+      { name: "description", content: "Edite os nomes dos barbeiros, serviços e preços." },
+      { property: "og:title", content: "Ajustes — Barbearia" },
+      { property: "og:description", content: "Edite barbeiros, serviços e preços." },
+    ],
+  }),
+  beforeLoad: ({ context }) => {
+    if (!context.me?.isAdmin) throw redirect({ to: "/" });
+  },
+  loader: ({ context }) =>
+    Promise.all([
+      context.queryClient.ensureQueryData(barbersQuery),
+      context.queryClient.ensureQueryData(servicesQuery),
+    ]),
+  component: Settings,
+  errorComponent: ({ error }) => <p className="text-destructive">{error instanceof Error ? error.message : String(error)}</p>,
+  notFoundComponent: () => <p>Não encontrado.</p>,
+});
+
+const input =
+  "w-full rounded-xl border border-input bg-card px-3 py-2.5 text-base outline-none focus:border-primary";
+
+function Settings() {
+  const { data: barbers } = useSuspenseQuery(barbersQuery);
+  const { data: services } = useSuspenseQuery(servicesQuery);
+  const qc = useQueryClient();
+  const [newName, setNewName] = useState("");
+  const [newPrice, setNewPrice] = useState("");
+
+  const done = (key: string, msg = "Salvo") => {
+    toast.success(msg);
+    qc.invalidateQueries({ queryKey: [key] });
+  };
+
+  const renameBarber = async (id: string, name: string) => {
+    if (!name.trim()) return;
+    const { error } = await supabase.from("barbers").update({ name: name.trim() }).eq("id", id);
+    error ? toast.error(error.message) : done("barbers");
+  };
+  const updateService = async (id: string, patch: { name?: string; price?: number }) => {
+    const { error } = await supabase.from("services").update(patch).eq("id", id);
+    error ? toast.error(error.message) : done("services");
+  };
+  const removeService = async (id: string) => {
+    if (!confirm("Remover este serviço?")) return;
+    const { error } = await supabase.from("services").update({ active: false }).eq("id", id);
+    error ? toast.error(error.message) : done("services", "Removido");
+  };
+  const addService = async () => {
+    const price = Number(newPrice.replace(",", "."));
+    if (!newName.trim() || !price) { toast.error("Preencha nome e preço"); return; }
+    const { error } = await supabase.from("services").insert({ name: newName.trim(), price });
+    if (error) { toast.error(error.message); return; }
+    setNewName("");
+    setNewPrice("");
+    done("services", "Serviço adicionado");
+  };
+
+  return (
+    <div className="space-y-10">
+      <h1 className="font-display text-3xl font-semibold tracking-tight">Ajustes</h1>
+
+      <section className="space-y-3">
+        <h2 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Barbeiros</h2>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {barbers.map((b) => (
+            <input
+              key={b.id}
+              defaultValue={b.name}
+              className={input}
+              onBlur={(e) => e.target.value !== b.name && renameBarber(b.id, e.target.value)}
+            />
+          ))}
+        </div>
+      </section>
+
+      <BarberAccess barbers={barbers} />
+
+      <section className="space-y-3">
+        <h2 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
+          Serviços e preços (R$)
+        </h2>
+        <div className="space-y-2">
+          {services.map((s) => (
+            <div key={s.id} className="flex gap-2">
+              <input
+                defaultValue={s.name}
+                className={input}
+                onBlur={(e) => e.target.value !== s.name && e.target.value.trim() && updateService(s.id, { name: e.target.value.trim() })}
+              />
+              <input
+                defaultValue={String(s.price)}
+                inputMode="decimal"
+                className={`${input} w-28`}
+                onBlur={(e) => {
+                  const v = Number(e.target.value.replace(",", "."));
+                  if (v && v !== Number(s.price)) updateService(s.id, { price: v });
+                }}
+              />
+              <button
+                aria-label="Remover"
+                onClick={() => removeService(s.id)}
+                className="rounded-xl px-3 text-muted-foreground hover:bg-secondary hover:text-destructive"
+              >
+                <Trash2 className="h-4 w-4" />
+              </button>
+            </div>
+          ))}
+          <div className="flex gap-2 pt-2">
+            <input placeholder="Novo serviço" value={newName} onChange={(e) => setNewName(e.target.value)} className={input} />
+            <input
+              placeholder="Preço"
+              inputMode="decimal"
+              value={newPrice}
+              onChange={(e) => setNewPrice(e.target.value)}
+              className={`${input} w-28`}
+            />
+            <button
+              onClick={addService}
+              aria-label="Adicionar"
+              className="rounded-xl bg-primary px-3 text-primary-foreground"
+            >
+              <Plus className="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

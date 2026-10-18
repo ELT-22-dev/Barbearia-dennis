@@ -1,1 +1,160 @@
-aW1wb3J0IHsgY3JlYXRlRmlsZVJvdXRlIH0gZnJvbSAiQHRhbnN0YWNrL3JlYWN0LXJvdXRlciI7CmltcG9ydCB7IHVzZU11dGF0aW9uLCB1c2VRdWVyeUNsaWVudCwgdXNlU3VzcGVuc2VRdWVyeSB9IGZyb20gIkB0YW5zdGFjay9yZWFjdC1xdWVyeSI7CmltcG9ydCB7IFRyYXNoMiB9IGZyb20gImx1Y2lkZS1yZWFjdCI7CmltcG9ydCB7IHRvYXN0IH0gZnJvbSAic29ubmVyIjsKaW1wb3J0IHsgc3VwYWJhc2UgfSBmcm9tICJAL2ludGVncmF0aW9ucy9zdXBhYmFzZS9jbGllbnQiOwppbXBvcnQgewogIGFwcG9pbnRtZW50c1F1ZXJ5LAogIGJybCwKICBzcGxpdFByaWNlLAogIHN1bW1hcml6ZSwKICBQQVlNRU5UX0xBQkVMUywKICB0eXBlIFBheW1lbnRNZXRob2QsCiAgdHlwZSBQZXJpb2QsCn0gZnJvbSAiQC9saWIvYmFyYmVyIjsKaW1wb3J0IHsgbWVRdWVyeSB9IGZyb20gIkAvbGliL2F1dGgiOwoKY29uc3QgcGVyaW9kczogeyBpZDogUGVyaW9kOyBsYWJlbDogc3RyaW5nIH1bXSA9IFsKICB7IGlkOiAiaG9qZSIsIGxhYmVsOiAiSG9qZSIgfSwKICB7IGlkOiAic2VtYW5hIiwgbGFiZWw6ICJTZW1hbmEiIH0sCiAgeyBpZDogIm1lcyIsIGxhYmVsOiAiTcOqcyIgfSwKXTsKCmV4cG9ydCBjb25zdCBSb3V0ZSA9IGNyZWF0ZUZpbGVSb3V0ZSgiL19hdXRoZW50aWNhdGVkL3Jlc3VtbyIpKHsKICB2YWxpZGF0ZVNlYXJjaDogKHM6IFJlY29yZDxzdHJpbmcsIHVua25vd24+KTogeyBwOiBQZXJpb2QgfSA9PiAoewogICAgcDogc1sicCJdID09PSAic2VtYW5hIiB8fCBzWyJwIl0gPT09ICJtZXMiID8gc1sicCJdIDogImhvamUiLAogIH0pLAogIGxvYWRlckRlcHM6ICh7IHNlYXJjaCB9KSA9PiAoeyBwOiBzZWFyY2gucCB9KSwKICBsb2FkZXI6ICh7IGNvbnRleHQsIGRlcHMgfSkgPT4gY29udGV4dC5xdWVyeUNsaWVudC5lbnN1cmVRdWVyeURhdGEoYXBwb2ludG1lbnRzUXVlcnkoZGVwcy5wKSksCiAgaGVhZDogKCkgPT4gKHsKICAgIG1ldGE6IFsKICAgICAgeyB0aXRsZTogIlJlc3VtbyDigJQgQmFyYmVhcmlhIiB9LAogICAgICB7IG5hbWU6ICJkZXNjcmlwdGlvbiIsIGNvbnRlbnQ6ICJHYW5ob3MgZGUgY2FkYSBiYXJiZWlybywgcGFydGUgZGEgYmFyYmVhcmlhIGUgdG90YWlzIHBvciBwYWdhbWVudG8uIiB9LAogICAgICB7IHByb3BlcnR5OiAib2c6dGl0bGUiLCBjb250ZW50OiAiUmVzdW1vIOKAlCBCYXJiZWFyaWEiIH0sCiAgICAgIHsgcHJvcGVydHk6ICJvZzpkZXNjcmlwdGlvbiIsIGNvbnRlbnQ6ICJHYW5ob3MgZGUgY2FkYSBiYXJiZWlybyBlIGRhIGJhcmJlYXJpYS4iIH0sCiAgICBdLAogIH0pLAogIGNvbXBvbmVudDogU3VtbWFyeSwKICBlcnJvckNvbXBvbmVudDogKHsgZXJyb3IgfSkgPT4gPHAgY2xhc3NOYW1lPSJ0ZXh0LWRlc3RydWN0aXZlIj57ZXJyb3IgaW5zdGFuY2VvZiBFcnJvciA/IGVycm9yLm1lc3NhZ2UgOiBTdHJpbmcoZXJyb3IpfTwvcD4sCiAgbm90Rm91bmRDb21wb25lbnQ6ICgpID0+IDxwPk7Do28gZW5jb250cmFkby48L3A+LAp9KTsKCmZ1bmN0aW9uIFN1bW1hcnkoKSB7CiAgY29uc3QgeyBwIH0gPSBSb3V0ZS51c2VTZWFyY2goKTsKICBjb25zdCBuYXZpZ2F0ZSA9IFJvdXRlLnVzZU5hdmlnYXRlKCk7CiAgY29uc3QgeyBkYXRhIH0gPSB1c2VTdXNwZW5zZVF1ZXJ5KGFwcG9pbnRtZW50c1F1ZXJ5KHApKTsKICBjb25zdCBzID0gc3VtbWFyaXplKGRhdGEpOwogIGNvbnN0IHsgZGF0YTogbWUgfSA9IHVzZVN1c3BlbnNlUXVlcnkobWVRdWVyeSk7CiAgY29uc3QgaXNBZG1pbiA9ICEhbWU/LmlzQWRtaW47CiAgY29uc3QgcWMgPSB1c2VRdWVyeUNsaWVudCgpOwoKICBjb25zdCByZW1vdmUgPSB1c2VNdXRhdGlvbih7CiAgICBtdXRhdGlvbkZuOiBhc3luYyAoaWQ6IHN0cmluZykgPT4gewogICAgICBjb25zdCB7IGVycm9yIH0gPSBhd2FpdCBzdXBhYmFzZS5mcm9tKCJhcHBvaW50bWVudHMiKS5kZWxldGUoKS5lcSgiaWQiLCBpZCk7CiAgICAgIGlmIChlcnJvcikgdGhyb3cgZXJyb3I7CiAgICB9LAogICAgb25TdWNjZXNzOiAoKSA9PiB7CiAgICAgIHRvYXN0LnN1Y2Nlc3MoIkxhbsOnYW1lbnRvIGFwYWdhZG8iKTsKICAgICAgcWMuaW52YWxpZGF0ZVF1ZXJpZXMoeyBxdWVyeUtleTogWyJhcHBvaW50bWVudHMiXSB9KTsKICAgIH0sCiAgfSk7CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS04Ij4KICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZmxleC13cmFwIGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTQiPgogICAgICAgIDxoMSBjbGFzc05hbWU9ImZvbnQtZGlzcGxheSB0ZXh0LTN4bCBmb250LXNlbWlib2xkIHRyYWNraW5nLXRpZ2h0Ij57aXNBZG1pbiA/ICJSZXN1bW8gZ2VyYWwiIDogIk1ldXMgY29ydGVzIn08L2gxPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IHJvdW5kZWQteGwgYmctc2Vjb25kYXJ5IHAtMSI+CiAgICAgICAgICB7cGVyaW9kcy5tYXAoKHgpID0+ICgKICAgICAgICAgICAgPGJ1dHRvbgogICAgICAgICAgICAgIGtleT17eC5pZH0KICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBuYXZpZ2F0ZSh7IHNlYXJjaDogeyBwOiB4LmlkIH0gfSl9CiAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgcm91bmRlZC1sZyBweC00IHB5LTEuNSB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRyYW5zaXRpb24tY29sb3JzICR7CiAgICAgICAgICAgICAgICBwID09PSB4LmlkID8gImJnLWNhcmQgdGV4dC1mb3JlZ3JvdW5kIHNoYWRvdy1zb2Z0IiA6ICJ0ZXh0LW11dGVkLWZvcmVncm91bmQiCiAgICAgICAgICAgICAgfWB9CiAgICAgICAgICAgID4KICAgICAgICAgICAgICB7eC5sYWJlbH0KICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICApKX0KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CgogICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBncmlkLWNvbHMtMiBnYXAtMyBsZzpncmlkLWNvbHMtMyI+CiAgICAgICAgPFN0YXQgbGFiZWw9IlRvdGFsIiB2YWx1ZT17YnJsKHMudG90YWwpfSBzdWI9e2Ake3MuY291bnR9IGF0ZW5kaW1lbnRvc2B9IC8+CiAgICAgICAge2lzQWRtaW4gPyAoCiAgICAgICAgICA8U3RhdCBsYWJlbD0iQmFyYmVhcmlhICg1MCUpIiB2YWx1ZT17YnJsKHMuc2hvcCl9IGFjY2VudCAvPgogICAgICAgICkgOiAoCiAgICAgICAgICA8U3RhdCBsYWJlbD0iU3VhIHBhcnRlICg1MCUpIiB2YWx1ZT17YnJsKHMudG90YWwgLSBzLnNob3ApfSBhY2NlbnQgLz4KICAgICAgICApfQogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJjb2wtc3Bhbi0yIGdyaWQgZ3JpZC1jb2xzLTMgZ2FwLTIgcm91bmRlZC0yeGwgYm9yZGVyIGJvcmRlci1ib3JkZXIgYmctY2FyZCBwLTQgbGc6Y29sLXNwYW4tMSI+CiAgICAgICAgICB7KE9iamVjdC5rZXlzKFBBWU1FTlRfTEFCRUxTKSBhcyBQYXltZW50TWV0aG9kW10pLm1hcCgoaykgPT4gKAogICAgICAgICAgICA8ZGl2IGtleT17a30+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+e1BBWU1FTlRfTEFCRUxTW2tdfTwvcD4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9ImZvbnQtc2VtaWJvbGQiPnticmwocy5ieVBheW1lbnRba10pfTwvcD4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICApKX0KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CgogICAgICA8c2VjdGlvbiBjbGFzc05hbWU9InNwYWNlLXktMyI+CiAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC1zbSBmb250LW1lZGl1bSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj5CYXJiZWlyb3M8L2gyPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGdhcC0zIHNtOmdyaWQtY29scy0zIj4KICAgICAgICAgIHtPYmplY3QuZW50cmllcyhzLmJ5QmFyYmVyKS5tYXAoKFtrLCBiXSkgPT4gKAogICAgICAgICAgICA8ZGl2IGtleT17a30gY2xhc3NOYW1lPSJyb3VuZGVkLTJ4bCBib3JkZXIgYm9yZGVyLWJvcmRlciBiZy1jYXJkIHAtNCI+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJmb250LW1lZGl1bSI+e2IubmFtZX08L3A+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJmb250LWRpc3BsYXkgdGV4dC0yeGwgZm9udC1zZW1pYm9sZCI+e2JybChiLmVhcm5lZCl9PC9wPgogICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LW11dGVkLWZvcmVncm91bmQiPntiLmNvdW50fSBjb3J0ZXM8L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgKSl9CiAgICAgICAgICB7cy5jb3VudCA9PT0gMCAmJiA8cCBjbGFzc05hbWU9InRleHQtc20gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj5OZW5odW0gYXRlbmRpbWVudG8gYWluZGEuPC9wPn0KICAgICAgICA8L2Rpdj4KICAgICAgPC9zZWN0aW9uPgoKICAgICAge2RhdGEubGVuZ3RoID4gMCAmJiAoCiAgICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJzcGFjZS15LTMiPgogICAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC1zbSBmb250LW1lZGl1bSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj5MYW7Dp2FtZW50b3M8L2gyPgogICAgICAgICAgPHVsIGNsYXNzTmFtZT0iZGl2aWRlLXkgZGl2aWRlLWJvcmRlciByb3VuZGVkLTJ4bCBib3JkZXIgYm9yZGVyLWJvcmRlciBiZy1jYXJkIj4KICAgICAgICAgICAge2RhdGEubWFwKChhKSA9PiAoCiAgICAgICAgICAgICAgPGxpIGtleT17YS5pZH0gY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyBweC00IHB5LTMiPgogICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1pbi13LTAgZmxleC0xIj4KICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0cnVuY2F0ZSBmb250LW1lZGl1bSI+CiAgICAgICAgICAgICAgICAgICAge2Euc2VydmljZV9uYW1lfSDCtyB7YS5iYXJiZXJfbmFtZX0KICAgICAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQteHMgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj4KICAgICAgICAgICAgICAgICAgICB7bmV3IERhdGUoYS5jcmVhdGVkX2F0KS50b0xvY2FsZVN0cmluZygicHQtQlIiLCB7CiAgICAgICAgICAgICAgICAgICAgICBkYXk6ICIyLWRpZ2l0IiwKICAgICAgICAgICAgICAgICAgICAgIG1vbnRoOiAiMi1kaWdpdCIsCiAgICAgICAgICAgICAgICAgICAgICBob3VyOiAiMi1kaWdpdCIsCiAgICAgICAgICAgICAgICAgICAgICBtaW51dGU6ICIyLWRpZ2l0IiwKICAgICAgICAgICAgICAgICAgICB9KX17IiAifQogICAgICAgICAgICAgICAgICAgIMK3IHtQQVlNRU5UX0xBQkVMU1thLnBheW1lbnRfbWV0aG9kIGFzIFBheW1lbnRNZXRob2RdfSDCtyBiYXJiZWlyb3siICJ9CiAgICAgICAgICAgICAgICAgICAge2JybChzcGxpdFByaWNlKE51bWJlcihhLnByaWNlKSkuYmFyYmVyKX0KICAgICAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImZvbnQtc2VtaWJvbGQiPnticmwoTnVtYmVyKGEucHJpY2UpKX08L3NwYW4+CiAgICAgICAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgICAgICAgIGFyaWEtbGFiZWw9IkFwYWdhciIKICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gY29uZmlybSgiQXBhZ2FyIGVzdGUgbGFuw6dhbWVudG8/IikgJiYgcmVtb3ZlLm11dGF0ZShhLmlkKX0KICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJyb3VuZGVkLWxnIHAtMiB0ZXh0LW11dGVkLWZvcmVncm91bmQgaG92ZXI6Ymctc2Vjb25kYXJ5IGhvdmVyOnRleHQtZGVzdHJ1Y3RpdmUiCiAgICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICAgIDxUcmFzaDIgY2xhc3NOYW1lPSJoLTQgdy00IiAvPgogICAgICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICAgICAgPC9saT4KICAgICAgICAgICAgKSl9CiAgICAgICAgICA8L3VsPgogICAgICAgIDwvc2VjdGlvbj4KICAgICAgKX0KICAgIDwvZGl2PgogICk7Cn0KCmZ1bmN0aW9uIFN0YXQoeyBsYWJlbCwgdmFsdWUsIHN1YiwgYWNjZW50IH06IHsgbGFiZWw6IHN0cmluZzsgdmFsdWU6IHN0cmluZzsgc3ViPzogc3RyaW5nOyBhY2NlbnQ/OiBib29sZWFuIH0pIHsKICByZXR1cm4gKAogICAgPGRpdgogICAgICBjbGFzc05hbWU9e2Byb3VuZGVkLTJ4bCBib3JkZXIgcC00ICR7YWNjZW50ID8gImJvcmRlci1wcmltYXJ5IGJnLXByaW1hcnkgdGV4dC1wcmltYXJ5LWZvcmVncm91bmQiIDogImJvcmRlci1ib3JkZXIgYmctY2FyZCJ9YH0KICAgID4KICAgICAgPHAgY2xhc3NOYW1lPXtgdGV4dC14cyAke2FjY2VudCA/ICJvcGFjaXR5LTgwIiA6ICJ0ZXh0LW11dGVkLWZvcmVncm91bmQifWB9PntsYWJlbH08L3A+CiAgICAgIDxwIGNsYXNzTmFtZT0iZm9udC1kaXNwbGF5IHRleHQtMnhsIGZvbnQtc2VtaWJvbGQiPnt2YWx1ZX08L3A+CiAgICAgIHtzdWIgJiYgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+e3N1Yn08L3A+fQogICAgPC9kaXY+CiAgKTsKfQo=
+import { createFileRoute } from "@tanstack/react-router";
+import { useMutation, useQueryClient, useSuspenseQuery } from "@tanstack/react-query";
+import { Trash2 } from "lucide-react";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import {
+  appointmentsQuery,
+  brl,
+  splitPrice,
+  summarize,
+  PAYMENT_LABELS,
+  type PaymentMethod,
+  type Period,
+} from "@/lib/barber";
+import { meQuery } from "@/lib/auth";
+
+const periods: { id: Period; label: string }[] = [
+  { id: "hoje", label: "Hoje" },
+  { id: "semana", label: "Semana" },
+  { id: "mes", label: "Mês" },
+];
+
+export const Route = createFileRoute("/_authenticated/resumo")({
+  validateSearch: (s: Record<string, unknown>): { p: Period } => ({
+    p: s["p"] === "semana" || s["p"] === "mes" ? s["p"] : "hoje",
+  }),
+  loaderDeps: ({ search }) => ({ p: search.p }),
+  loader: ({ context, deps }) => context.queryClient.ensureQueryData(appointmentsQuery(deps.p)),
+  head: () => ({
+    meta: [
+      { title: "Resumo — Barbearia" },
+      { name: "description", content: "Ganhos de cada barbeiro, parte da barbearia e totais por pagamento." },
+      { property: "og:title", content: "Resumo — Barbearia" },
+      { property: "og:description", content: "Ganhos de cada barbeiro e da barbearia." },
+    ],
+  }),
+  component: Summary,
+  errorComponent: ({ error }) => <p className="text-destructive">{error instanceof Error ? error.message : String(error)}</p>,
+  notFoundComponent: () => <p>Não encontrado.</p>,
+});
+
+function Summary() {
+  const { p } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const { data } = useSuspenseQuery(appointmentsQuery(p));
+  const s = summarize(data);
+  const { data: me } = useSuspenseQuery(meQuery);
+  const isAdmin = !!me?.isAdmin;
+  const qc = useQueryClient();
+
+  const remove = useMutation({
+    mutationFn: async (id: string) => {
+      const { error } = await supabase.from("appointments").delete().eq("id", id);
+      if (error) throw error;
+    },
+    onSuccess: () => {
+      toast.success("Lançamento apagado");
+      qc.invalidateQueries({ queryKey: ["appointments"] });
+    },
+  });
+
+  return (
+    <div className="space-y-8">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <h1 className="font-display text-3xl font-semibold tracking-tight">{isAdmin ? "Resumo geral" : "Meus cortes"}</h1>
+        <div className="flex rounded-xl bg-secondary p-1">
+          {periods.map((x) => (
+            <button
+              key={x.id}
+              onClick={() => navigate({ search: { p: x.id } })}
+              className={`rounded-lg px-4 py-1.5 text-sm font-medium transition-colors ${
+                p === x.id ? "bg-card text-foreground shadow-soft" : "text-muted-foreground"
+              }`}
+            >
+              {x.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
+        <Stat label="Total" value={brl(s.total)} sub={`${s.count} atendimentos`} />
+        {isAdmin ? (
+          <Stat label="Barbearia (50%)" value={brl(s.shop)} accent />
+        ) : (
+          <Stat label="Sua parte (50%)" value={brl(s.total - s.shop)} accent />
+        )}
+        <div className="col-span-2 grid grid-cols-3 gap-2 rounded-2xl border border-border bg-card p-4 lg:col-span-1">
+          {(Object.keys(PAYMENT_LABELS) as PaymentMethod[]).map((k) => (
+            <div key={k}>
+              <p className="text-xs text-muted-foreground">{PAYMENT_LABELS[k]}</p>
+              <p className="font-semibold">{brl(s.byPayment[k])}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <section className="space-y-3">
+        <h2 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Barbeiros</h2>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {Object.entries(s.byBarber).map(([k, b]) => (
+            <div key={k} className="rounded-2xl border border-border bg-card p-4">
+              <p className="font-medium">{b.name}</p>
+              <p className="font-display text-2xl font-semibold">{brl(b.earned)}</p>
+              <p className="text-xs text-muted-foreground">{b.count} cortes</p>
+            </div>
+          ))}
+          {s.count === 0 && <p className="text-sm text-muted-foreground">Nenhum atendimento ainda.</p>}
+        </div>
+      </section>
+
+      {data.length > 0 && (
+        <section className="space-y-3">
+          <h2 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Lançamentos</h2>
+          <ul className="divide-y divide-border rounded-2xl border border-border bg-card">
+            {data.map((a) => (
+              <li key={a.id} className="flex items-center gap-3 px-4 py-3">
+                <div className="min-w-0 flex-1">
+                  <p className="truncate font-medium">
+                    {a.service_name} · {a.barber_name}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {new Date(a.created_at).toLocaleString("pt-BR", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}{" "}
+                    · {PAYMENT_LABELS[a.payment_method as PaymentMethod]} · barbeiro{" "}
+                    {brl(splitPrice(Number(a.price)).barber)}
+                  </p>
+                </div>
+                <span className="font-semibold">{brl(Number(a.price))}</span>
+                <button
+                  aria-label="Apagar"
+                  onClick={() => confirm("Apagar este lançamento?") && remove.mutate(a.id)}
+                  className="rounded-lg p-2 text-muted-foreground hover:bg-secondary hover:text-destructive"
+                >
+                  <Trash2 className="h-4 w-4" />
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function Stat({ label, value, sub, accent }: { label: string; value: string; sub?: string; accent?: boolean }) {
+  return (
+    <div
+      className={`rounded-2xl border p-4 ${accent ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card"}`}
+    >
+      <p className={`text-xs ${accent ? "opacity-80" : "text-muted-foreground"}`}>{label}</p>
+      <p className="font-display text-2xl font-semibold">{value}</p>
+      {sub && <p className="text-xs text-muted-foreground">{sub}</p>}
+    </div>
+  );
+}

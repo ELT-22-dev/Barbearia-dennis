@@ -1,1 +1,31 @@
-aW1wb3J0IHsgZGVzY3JpYmUsIGl0LCBleHBlY3QgfSBmcm9tICJ2aXRlc3QiOwppbXBvcnQgeyBzcGxpdFByaWNlLCBzdW1tYXJpemUgfSBmcm9tICJAL2xpYi9iYXJiZXIiOwoKZGVzY3JpYmUoImRpdmlzw6NvIDUwLzUwIiwgKCkgPT4gewogIGl0KCJjb3J0ZSBkZSBSJDMwIGTDoSBSJDE1IHBhcmEgY2FkYSIsICgpID0+IHsKICAgIGV4cGVjdChzcGxpdFByaWNlKDMwKSkudG9FcXVhbCh7IGJhcmJlcjogMTUsIHNob3A6IDE1IH0pOwogIH0pOwogIGl0KCJjb3J0ZSBkZSBSJDI1IGTDoSBSJDEyLDUwIHBhcmEgY2FkYSIsICgpID0+IHsKICAgIGV4cGVjdChzcGxpdFByaWNlKDI1KSkudG9FcXVhbCh7IGJhcmJlcjogMTIuNSwgc2hvcDogMTIuNSB9KTsKICB9KTsKICBpdCgidG90YWlzIHBvciBiYXJiZWlybyBlIHBhZ2FtZW50byIsICgpID0+IHsKICAgIGNvbnN0IGJhc2UgPSB7IHNlcnZpY2VfbmFtZTogIkNvcnRlIiwgY3JlYXRlZF9hdDogIiIgfTsKICAgIGNvbnN0IHMgPSBzdW1tYXJpemUoWwogICAgICB7IC4uLmJhc2UsIGlkOiAiMSIsIGJhcmJlcl9pZDogImEiLCBiYXJiZXJfbmFtZTogIkEiLCBwcmljZTogMzAsIHBheW1lbnRfbWV0aG9kOiAicGl4IiB9LAogICAgICB7IC4uLmJhc2UsIGlkOiAiMiIsIGJhcmJlcl9pZDogImEiLCBiYXJiZXJfbmFtZTogIkEiLCBwcmljZTogMjUsIHBheW1lbnRfbWV0aG9kOiAiZGluaGVpcm8iIH0sCiAgICAgIHsgLi4uYmFzZSwgaWQ6ICIzIiwgYmFyYmVyX2lkOiAiYiIsIGJhcmJlcl9uYW1lOiAiQiIsIHByaWNlOiAzMCwgcGF5bWVudF9tZXRob2Q6ICJwaXgiIH0sCiAgICBdKTsKICAgIGV4cGVjdChzLnRvdGFsKS50b0JlKDg1KTsKICAgIGV4cGVjdChzLnNob3ApLnRvQmUoNDIuNSk7CiAgICBleHBlY3Qocy5ieUJhcmJlclsiYSJdPy5lYXJuZWQpLnRvQmUoMjcuNSk7CiAgICBleHBlY3Qocy5ieVBheW1lbnQucGl4KS50b0JlKDYwKTsKICB9KTsKfSk7CgppbXBvcnQgeyBpc0FkbWluRW1haWwgfSBmcm9tICJAL2xpYi9hdXRoIjsKZGVzY3JpYmUoImFkbWluIiwgKCkgPT4gewogIGl0KCJvbmx5IERlbm5pcydzIGVtYWlsIGlzIHRoZSBhZG1pbiBlbWFpbCIsICgpID0+IHsKICAgIGV4cGVjdChpc0FkbWluRW1haWwoIiBadWxtYVplcm5hMjAyMEBnbWFpbC5jb20gIikpLnRvQmUodHJ1ZSk7CiAgICBleHBlY3QoaXNBZG1pbkVtYWlsKCJlZGR5QGdtYWlsLmNvbSIpKS50b0JlKGZhbHNlKTsKICB9KTsKfSk7Cg==
+import { describe, it, expect } from "vitest";
+import { splitPrice, summarize } from "@/lib/barber";
+
+describe("divisão 50/50", () => {
+  it("corte de R$30 dá R$15 para cada", () => {
+    expect(splitPrice(30)).toEqual({ barber: 15, shop: 15 });
+  });
+  it("corte de R$25 dá R$12,50 para cada", () => {
+    expect(splitPrice(25)).toEqual({ barber: 12.5, shop: 12.5 });
+  });
+  it("totais por barbeiro e pagamento", () => {
+    const base = { service_name: "Corte", created_at: "" };
+    const s = summarize([
+      { ...base, id: "1", barber_id: "a", barber_name: "A", price: 30, payment_method: "pix" },
+      { ...base, id: "2", barber_id: "a", barber_name: "A", price: 25, payment_method: "dinheiro" },
+      { ...base, id: "3", barber_id: "b", barber_name: "B", price: 30, payment_method: "pix" },
+    ]);
+    expect(s.total).toBe(85);
+    expect(s.shop).toBe(42.5);
+    expect(s.byBarber["a"]?.earned).toBe(27.5);
+    expect(s.byPayment.pix).toBe(60);
+  });
+});
+
+import { isAdminEmail } from "@/lib/auth";
+describe("admin", () => {
+  it("only Dennis's email is the admin email", () => {
+    expect(isAdminEmail(" ZulmaZerna2020@gmail.com ")).toBe(true);
+    expect(isAdminEmail("eddy@gmail.com")).toBe(false);
+  });
+});

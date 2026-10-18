@@ -1,1 +1,138 @@
-aW1wb3J0IHsgUXVlcnlDbGllbnQsIFF1ZXJ5Q2xpZW50UHJvdmlkZXIgfSBmcm9tICJAdGFuc3RhY2svcmVhY3QtcXVlcnkiOwppbXBvcnQgewogIE91dGxldCwKICBMaW5rLAogIGNyZWF0ZVJvb3RSb3V0ZVdpdGhDb250ZXh0LAogIHVzZVJvdXRlciwKICBIZWFkQ29udGVudCwKICBTY3JpcHRzLAogIHR5cGUgRXJyb3JDb21wb25lbnRQcm9wcywKfSBmcm9tICJAdGFuc3RhY2svcmVhY3Qtcm91dGVyIjsKaW1wb3J0IHsgdXNlRWZmZWN0LCB0eXBlIFJlYWN0Tm9kZSB9IGZyb20gInJlYWN0IjsKCmltcG9ydCBhcHBDc3MgZnJvbSAiLi4vc3R5bGVzLmNzcz91cmwiOwppbXBvcnQgeyByZXBvcnRMb3ZhYmxlRXJyb3IgfSBmcm9tICIuLi9saWIvbG92YWJsZS1lcnJvci1yZXBvcnRpbmciOwppbXBvcnQgeyBUb2FzdGVyIH0gZnJvbSAic29ubmVyIjsKaW1wb3J0IHsgc3VwYWJhc2UgfSBmcm9tICJAL2ludGVncmF0aW9ucy9zdXBhYmFzZS9jbGllbnQiOwoKZnVuY3Rpb24gTm90Rm91bmRDb21wb25lbnQoKSB7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IG1pbi1oLXNjcmVlbiBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgYmctYmFja2dyb3VuZCBweC00Ij4KICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LW1kIHRleHQtY2VudGVyIj4KICAgICAgICA8aDEgY2xhc3NOYW1lPSJ0ZXh0LTd4bCBmb250LWJvbGQgdGV4dC1mb3JlZ3JvdW5kIj40MDQ8L2gxPgogICAgICAgIDxoMiBjbGFzc05hbWU9Im10LTQgdGV4dC14bCBmb250LXNlbWlib2xkIHRleHQtZm9yZWdyb3VuZCI+UGFnZSBub3QgZm91bmQ8L2gyPgogICAgICAgIDxwIGNsYXNzTmFtZT0ibXQtMiB0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+CiAgICAgICAgICBUaGUgcGFnZSB5b3UncmUgbG9va2luZyBmb3IgZG9lc24ndCBleGlzdCBvciBoYXMgYmVlbiBtb3ZlZC4KICAgICAgICA8L3A+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTYiPgogICAgICAgICAgPExpbmsKICAgICAgICAgICAgdG89Ii8iCiAgICAgICAgICAgIGNsYXNzTmFtZT0iaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHJvdW5kZWQtbWQgYmctcHJpbWFyeSBweC00IHB5LTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LXByaW1hcnktZm9yZWdyb3VuZCB0cmFuc2l0aW9uLWNvbG9ycyBob3ZlcjpiZy1wcmltYXJ5LzkwIgogICAgICAgICAgPgogICAgICAgICAgICBHbyBob21lCiAgICAgICAgICA8L0xpbms+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQoKZnVuY3Rpb24gRXJyb3JDb21wb25lbnQoeyBlcnJvciwgcmVzZXQgfTogRXJyb3JDb21wb25lbnRQcm9wcykgewogIGNvbnNvbGUuZXJyb3IoZXJyb3IpOwogIGNvbnN0IHJvdXRlciA9IHVzZVJvdXRlcigpOwogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICByZXBvcnRMb3ZhYmxlRXJyb3IoZXJyb3IsIHsgYm91bmRhcnk6ICJ0YW5zdGFja19yb290X2Vycm9yX2NvbXBvbmVudCIgfSk7CiAgfSwgW2Vycm9yXSk7CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBtaW4taC1zY3JlZW4gaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGJnLWJhY2tncm91bmQgcHgtNCI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYXgtdy1tZCB0ZXh0LWNlbnRlciI+CiAgICAgICAgPGgxIGNsYXNzTmFtZT0idGV4dC14bCBmb250LXNlbWlib2xkIHRyYWNraW5nLXRpZ2h0IHRleHQtZm9yZWdyb3VuZCI+CiAgICAgICAgICBUaGlzIHBhZ2UgZGlkbid0IGxvYWQKICAgICAgICA8L2gxPgogICAgICAgIDxwIGNsYXNzTmFtZT0ibXQtMiB0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+CiAgICAgICAgICBTb21ldGhpbmcgd2VudCB3cm9uZyBvbiBvdXIgZW5kLiBZb3UgY2FuIHRyeSByZWZyZXNoaW5nIG9yIGhlYWQgYmFjayBob21lLgogICAgICAgIDwvcD4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibXQtNiBmbGV4IGZsZXgtd3JhcCBqdXN0aWZ5LWNlbnRlciBnYXAtMiI+CiAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHsKICAgICAgICAgICAgICByb3V0ZXIuaW52YWxpZGF0ZSgpOwogICAgICAgICAgICAgIHJlc2V0KCk7CiAgICAgICAgICAgIH19CiAgICAgICAgICAgIGNsYXNzTmFtZT0iaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHJvdW5kZWQtbWQgYmctcHJpbWFyeSBweC00IHB5LTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LXByaW1hcnktZm9yZWdyb3VuZCB0cmFuc2l0aW9uLWNvbG9ycyBob3ZlcjpiZy1wcmltYXJ5LzkwIgogICAgICAgICAgPgogICAgICAgICAgICBUcnkgYWdhaW4KICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgPGEKICAgICAgICAgICAgaHJlZj0iLyIKICAgICAgICAgICAgY2xhc3NOYW1lPSJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcm91bmRlZC1tZCBib3JkZXIgYm9yZGVyLWlucHV0IGJnLWJhY2tncm91bmQgcHgtNCBweS0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1mb3JlZ3JvdW5kIHRyYW5zaXRpb24tY29sb3JzIGhvdmVyOmJnLWFjY2VudCIKICAgICAgICAgID4KICAgICAgICAgICAgR28gaG9tZQogICAgICAgICAgPC9hPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn0KCmV4cG9ydCBjb25zdCBSb3V0ZSA9IGNyZWF0ZVJvb3RSb3V0ZVdpdGhDb250ZXh0PHsgcXVlcnlDbGllbnQ6IFF1ZXJ5Q2xpZW50IH0+KCkoewogIGhlYWQ6ICgpID0+ICh7CiAgICBtZXRhOiBbCiAgICAgIHsgY2hhclNldDogInV0Zi04IiB9LAogICAgICB7IG5hbWU6ICJ2aWV3cG9ydCIsIGNvbnRlbnQ6ICJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MSIgfSwKICAgICAgeyB0aXRsZTogIkJhcmJlYXJpYSIgfSwKICAgICAgeyBuYW1lOiAiZGVzY3JpcHRpb24iLCBjb250ZW50OiAiQ29udHJvbGUgZGUgYXRlbmRpbWVudG9zIGUgZGl2aXPDo28gNTAvNTAgZGEgYmFyYmVhcmlhLiIgfSwKICAgICAgeyBwcm9wZXJ0eTogIm9nOnR5cGUiLCBjb250ZW50OiAid2Vic2l0ZSIgfSwKICAgICAgeyBuYW1lOiAidHdpdHRlcjpjYXJkIiwgY29udGVudDogInN1bW1hcnlfbGFyZ2VfaW1hZ2UiIH0sCiAgICBdLAogICAgbGlua3M6IFsKICAgICAgeyByZWw6ICJwcmVjb25uZWN0IiwgaHJlZjogImh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20iIH0sCiAgICAgIHsgcmVsOiAicHJlY29ubmVjdCIsIGhyZWY6ICJodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tIiwgY3Jvc3NPcmlnaW46ICJhbm9ueW1vdXMiIH0sCiAgICAgIHsKICAgICAgICByZWw6ICJzdHlsZXNoZWV0IiwKICAgICAgICBocmVmOiAiaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1PdXRmaXQ6d2dodEA1MDA7NjAwOzcwMCZmYW1pbHk9RmlndHJlZTp3Z2h0QDQwMDs1MDA7NjAwJmRpc3BsYXk9c3dhcCIsCiAgICAgIH0sCiAgICAgIHsgcmVsOiAic3R5bGVzaGVldCIsIGhyZWY6IGFwcENzcyB9LAogICAgICB7IHJlbDogImljb24iLCBocmVmOiAiL2Zhdmljb24uaWNvIiwgdHlwZTogImltYWdlL3gtaWNvbiIgfSwKICAgIF0sCiAgfSksCiAgc2hlbGxDb21wb25lbnQ6IFJvb3RTaGVsbCwKICBjb21wb25lbnQ6IFJvb3RDb21wb25lbnQsCiAgbm90Rm91bmRDb21wb25lbnQ6IE5vdEZvdW5kQ29tcG9uZW50LAogIGVycm9yQ29tcG9uZW50OiBFcnJvckNvbXBvbmVudCwKfSk7CgpmdW5jdGlvbiBSb290U2hlbGwoeyBjaGlsZHJlbiB9OiB7IGNoaWxkcmVuOiBSZWFjdE5vZGUgfSkgewogIHJldHVybiAoCiAgICA8aHRtbCBsYW5nPSJwdC1CUiI+CiAgICAgIDxoZWFkPgogICAgICAgIDxIZWFkQ29udGVudCAvPgogICAgICA8L2hlYWQ+CiAgICAgIDxib2R5PgogICAgICAgIHtjaGlsZHJlbn0KICAgICAgICA8U2NyaXB0cyAvPgogICAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgKTsKfQoKZnVuY3Rpb24gUm9vdENvbXBvbmVudCgpIHsKICBjb25zdCB7IHF1ZXJ5Q2xpZW50IH0gPSBSb3V0ZS51c2VSb3V0ZUNvbnRleHQoKTsKICBjb25zdCByb3V0ZXIgPSB1c2VSb3V0ZXIoKTsKCiAgdXNlRWZmZWN0KCgpID0+IHsKICAgIGNvbnN0IHsgZGF0YSB9ID0gc3VwYWJhc2UuYXV0aC5vbkF1dGhTdGF0ZUNoYW5nZSgoZXZlbnQpID0+IHsKICAgICAgaWYgKGV2ZW50ICE9PSAiU0lHTkVEX0lOIiAmJiBldmVudCAhPT0gIlNJR05FRF9PVVQiICYmIGV2ZW50ICE9PSAiVVNFUl9VUERBVEVEIikgcmV0dXJuOwogICAgICByb3V0ZXIuaW52YWxpZGF0ZSgpOwogICAgICBpZiAoZXZlbnQgIT09ICJTSUdORURfT1VUIikgcXVlcnlDbGllbnQuaW52YWxpZGF0ZVF1ZXJpZXMoKTsKICAgIH0pOwogICAgcmV0dXJuICgpID0+IGRhdGEuc3Vic2NyaXB0aW9uLnVuc3Vic2NyaWJlKCk7CiAgfSwgW3JvdXRlciwgcXVlcnlDbGllbnRdKTsKCiAgcmV0dXJuICgKICAgIDxRdWVyeUNsaWVudFByb3ZpZGVyIGNsaWVudD17cXVlcnlDbGllbnR9PgogICAgICA8T3V0bGV0IC8+CiAgICAgIDxUb2FzdGVyIHBvc2l0aW9uPSJ0b3AtY2VudGVyIiByaWNoQ29sb3JzIC8+CiAgICA8L1F1ZXJ5Q2xpZW50UHJvdmlkZXI+CiAgKTsKfQo=
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {
+  Outlet,
+  Link,
+  createRootRouteWithContext,
+  useRouter,
+  HeadContent,
+  Scripts,
+  type ErrorComponentProps,
+} from "@tanstack/react-router";
+import { useEffect, type ReactNode } from "react";
+
+import appCss from "../styles.css?url";
+import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Toaster } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+
+function NotFoundComponent() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="max-w-md text-center">
+        <h1 className="text-7xl font-bold text-foreground">404</h1>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          The page you're looking for doesn't exist or has been moved.
+        </p>
+        <div className="mt-6">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Go home
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
+  console.error(error);
+  const router = useRouter();
+  useEffect(() => {
+    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+  }, [error]);
+
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="max-w-md text-center">
+        <h1 className="text-xl font-semibold tracking-tight text-foreground">
+          This page didn't load
+        </h1>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Something went wrong on our end. You can try refreshing or head back home.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
+          <button
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Try again
+          </button>
+          <a
+            href="/"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            Go home
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  head: () => ({
+    meta: [
+      { charSet: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "Barbearia" },
+      { name: "description", content: "Controle de atendimentos e divisão 50/50 da barbearia." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap",
+      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+  }),
+  shellComponent: RootShell,
+  component: RootComponent,
+  notFoundComponent: NotFoundComponent,
+  errorComponent: ErrorComponent,
+});
+
+function RootShell({ children }: { children: ReactNode }) {
+  return (
+    <html lang="pt-BR">
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
+    </html>
+  );
+}
+
+function RootComponent() {
+  const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+
+  useEffect(() => {
+    const { data } = supabase.auth.onAuthStateChange((event) => {
+      if (event !== "SIGNED_IN" && event !== "SIGNED_OUT" && event !== "USER_UPDATED") return;
+      router.invalidate();
+      if (event !== "SIGNED_OUT") queryClient.invalidateQueries();
+    });
+    return () => data.subscription.unsubscribe();
+  }, [router, queryClient]);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Outlet />
+      <Toaster position="top-center" richColors />
+    </QueryClientProvider>
+  );
+}

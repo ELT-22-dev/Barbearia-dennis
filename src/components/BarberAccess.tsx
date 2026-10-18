@@ -1,1 +1,88 @@
-aW1wb3J0IHsgdXNlUXVlcnlDbGllbnQsIHVzZVN1c3BlbnNlUXVlcnkgfSBmcm9tICJAdGFuc3RhY2svcmVhY3QtcXVlcnkiOwppbXBvcnQgeyB1c2VTZXJ2ZXJGbiB9IGZyb20gIkB0YW5zdGFjay9yZWFjdC1zdGFydCI7CmltcG9ydCB7IHVzZVN0YXRlIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyB0b2FzdCB9IGZyb20gInNvbm5lciI7CmltcG9ydCB7IHN1cGFiYXNlIH0gZnJvbSAiQC9pbnRlZ3JhdGlvbnMvc3VwYWJhc2UvY2xpZW50IjsKaW1wb3J0IHsgY3JlYXRlQmFyYmVyQWNjb3VudCB9IGZyb20gIkAvbGliL2FkbWluLmZ1bmN0aW9ucyI7CmltcG9ydCB7IExPR0lOX09GRiwgbWVRdWVyeSB9IGZyb20gIkAvbGliL2F1dGgiOwoKdHlwZSBCID0geyBpZDogc3RyaW5nOyBuYW1lOiBzdHJpbmc7IHVzZXJfaWQ6IHN0cmluZyB8IG51bGw7IGVtYWlsOiBzdHJpbmcgfCBudWxsIH07Cgpjb25zdCBpbnB1dCA9CiAgInctZnVsbCByb3VuZGVkLXhsIGJvcmRlciBib3JkZXItaW5wdXQgYmctY2FyZCBweC0zIHB5LTIuNSB0ZXh0LWJhc2Ugb3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1wcmltYXJ5IjsKCmV4cG9ydCBmdW5jdGlvbiBCYXJiZXJBY2Nlc3MoeyBiYXJiZXJzIH06IHsgYmFyYmVyczogQltdIH0pIHsKICBjb25zdCB7IGRhdGE6IG1lIH0gPSB1c2VTdXNwZW5zZVF1ZXJ5KG1lUXVlcnkpOwogIGNvbnN0IHFjID0gdXNlUXVlcnlDbGllbnQoKTsKICBjb25zdCByZWZyZXNoID0gKCkgPT4gewogICAgcWMuaW52YWxpZGF0ZVF1ZXJpZXMoeyBxdWVyeUtleTogWyJiYXJiZXJzIl0gfSk7CiAgICBxYy5pbnZhbGlkYXRlUXVlcmllcyh7IHF1ZXJ5S2V5OiBbIm1lIl0gfSk7CiAgfTsKCiAgaWYgKExPR0lOX09GRikgcmV0dXJuIG51bGw7CiAgY29uc3QgbGlua1NlbGYgPSBhc3luYyAoaWQ6IHN0cmluZykgPT4gewogICAgaWYgKCFtZSkgcmV0dXJuOwogICAgY29uc3QgeyBlcnJvciB9ID0gYXdhaXQgc3VwYWJhc2UuZnJvbSgiYmFyYmVycyIpLnVwZGF0ZSh7IHVzZXJfaWQ6IG1lLmlkLCBlbWFpbDogbWUuZW1haWwgfSkuZXEoImlkIiwgaWQpOwogICAgaWYgKGVycm9yKSB0b2FzdC5lcnJvcihlcnJvci5tZXNzYWdlKTsKICAgIGVsc2UgewogICAgICB0b2FzdC5zdWNjZXNzKCJWb2PDqiBhZ29yYSDDqSBlc3RlIGJhcmJlaXJvIik7CiAgICAgIHJlZnJlc2goKTsKICAgIH0KICB9OwoKICByZXR1cm4gKAogICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJzcGFjZS15LTMiPgogICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXNtIGZvbnQtbWVkaXVtIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciB0ZXh0LW11dGVkLWZvcmVncm91bmQiPkFjZXNzbyBkb3MgYmFyYmVpcm9zPC9oMj4KICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMyI+CiAgICAgICAge2JhcmJlcnMubWFwKChiKSA9PiAoCiAgICAgICAgICA8ZGl2IGtleT17Yi5pZH0gY2xhc3NOYW1lPSJyb3VuZGVkLTJ4bCBib3JkZXIgYm9yZGVyLWJvcmRlciBiZy1jYXJkIHAtNCI+CiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0iZm9udC1tZWRpdW0iPntiLm5hbWV9PC9wPgogICAgICAgICAgICB7Yi51c2VyX2lkID8gKAogICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1zbSB0ZXh0LW11dGVkLWZvcmVncm91bmQiPgogICAgICAgICAgICAgICAge2IudXNlcl9pZCA9PT0gbWU/LmlkID8gIlZvY8OqIChhZG1pbmlzdHJhZG9yKSIgOiBgQWNlc3NvOiAke2IuZW1haWwgPz8gImNyaWFkbyJ9YH0KICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgICkgOiAoCiAgICAgICAgICAgICAgPE5ld0FjY2VzcyBiYXJiZXI9e2J9IG9uRG9uZT17cmVmcmVzaH0gb25TZWxmPXshbWU/LmJhcmJlciA/ICgpID0+IGxpbmtTZWxmKGIuaWQpIDogdW5kZWZpbmVkfSAvPgogICAgICAgICAgICApfQogICAgICAgICAgPC9kaXY+CiAgICAgICAgKSl9CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgogICk7Cn0KCmZ1bmN0aW9uIE5ld0FjY2Vzcyh7IGJhcmJlciwgb25Eb25lLCBvblNlbGYgfTogeyBiYXJiZXI6IEI7IG9uRG9uZTogKCkgPT4gdm9pZDsgb25TZWxmPzogKCgpID0+IHZvaWQpIHwgdW5kZWZpbmVkIH0pIHsKICBjb25zdCBbZW1haWwsIHNldEVtYWlsXSA9IHVzZVN0YXRlKCIiKTsKICBjb25zdCBbcGFzc3dvcmQsIHNldFBhc3N3b3JkXSA9IHVzZVN0YXRlKCIiKTsKICBjb25zdCBbYnVzeSwgc2V0QnVzeV0gPSB1c2VTdGF0ZShmYWxzZSk7CiAgY29uc3QgY3JlYXRlID0gdXNlU2VydmVyRm4oY3JlYXRlQmFyYmVyQWNjb3VudCk7CgogIGNvbnN0IHN1Ym1pdCA9IGFzeW5jIChlOiBSZWFjdC5Gb3JtRXZlbnQpID0+IHsKICAgIGUucHJldmVudERlZmF1bHQoKTsKICAgIHNldEJ1c3kodHJ1ZSk7CiAgICB0cnkgewogICAgICBhd2FpdCBjcmVhdGUoeyBkYXRhOiB7IGJhcmJlcklkOiBiYXJiZXIuaWQsIGVtYWlsLCBwYXNzd29yZCB9IH0pOwogICAgICB0b2FzdC5zdWNjZXNzKGBBY2Vzc28gY3JpYWRvIHBhcmEgJHtiYXJiZXIubmFtZX0uIFBhc3NlIG8gZS1tYWlsIGUgYSBzZW5oYSBwYXJhIGVsZS5gKTsKICAgICAgb25Eb25lKCk7CiAgICB9IGNhdGNoIChlcnIpIHsKICAgICAgdG9hc3QuZXJyb3IoZXJyIGluc3RhbmNlb2YgRXJyb3IgPyBlcnIubWVzc2FnZSA6IFN0cmluZyhlcnIpKTsKICAgIH0gZmluYWxseSB7CiAgICAgIHNldEJ1c3koZmFsc2UpOwogICAgfQogIH07CgogIHJldHVybiAoCiAgICA8Zm9ybSBvblN1Ym1pdD17c3VibWl0fSBjbGFzc05hbWU9Im10LTMgZ3JpZCBnYXAtMiBzbTpncmlkLWNvbHMtWzFmcl8xZnJfYXV0b10iPgogICAgICA8aW5wdXQgY2xhc3NOYW1lPXtpbnB1dH0gdHlwZT0iZW1haWwiIHBsYWNlaG9sZGVyPSJFLW1haWwiIHJlcXVpcmVkIHZhbHVlPXtlbWFpbH0gb25DaGFuZ2U9eyhlKSA9PiBzZXRFbWFpbChlLnRhcmdldC52YWx1ZSl9IC8+CiAgICAgIDxpbnB1dCBjbGFzc05hbWU9e2lucHV0fSB0eXBlPSJ0ZXh0IiBwbGFjZWhvbGRlcj0iU2VuaGEgKG3DrW4uIDYpIiByZXF1aXJlZCBtaW5MZW5ndGg9ezZ9IHZhbHVlPXtwYXNzd29yZH0gb25DaGFuZ2U9eyhlKSA9PiBzZXRQYXNzd29yZChlLnRhcmdldC52YWx1ZSl9IC8+CiAgICAgIDxidXR0b24gZGlzYWJsZWQ9e2J1c3l9IGNsYXNzTmFtZT0icm91bmRlZC14bCBiZy1wcmltYXJ5IHB4LTQgcHktMi41IGZvbnQtc2VtaWJvbGQgdGV4dC1wcmltYXJ5LWZvcmVncm91bmQgZGlzYWJsZWQ6b3BhY2l0eS01MCI+CiAgICAgICAge2J1c3kgPyAiLi4uIiA6ICJDcmlhciBhY2Vzc28ifQogICAgICA8L2J1dHRvbj4KICAgICAge29uU2VsZiAmJiAoCiAgICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIG9uQ2xpY2s9e29uU2VsZn0gY2xhc3NOYW1lPSJ0ZXh0LWxlZnQgdGV4dC1zbSB0ZXh0LW11dGVkLWZvcmVncm91bmQgdW5kZXJsaW5lLW9mZnNldC00IGhvdmVyOnVuZGVybGluZSBzbTpjb2wtc3Bhbi0zIj4KICAgICAgICAgIEVzdGUgYmFyYmVpcm8gc291IGV1CiAgICAgICAgPC9idXR0b24+CiAgICAgICl9CiAgICA8L2Zvcm0+CiAgKTsKfQo=
+import { useQueryClient, useSuspenseQuery } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
+import { useState } from "react";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import { createBarberAccount } from "@/lib/admin.functions";
+import { LOGIN_OFF, meQuery } from "@/lib/auth";
+
+type B = { id: string; name: string; user_id: string | null; email: string | null };
+
+const input =
+  "w-full rounded-xl border border-input bg-card px-3 py-2.5 text-base outline-none focus:border-primary";
+
+export function BarberAccess({ barbers }: { barbers: B[] }) {
+  const { data: me } = useSuspenseQuery(meQuery);
+  const qc = useQueryClient();
+  const refresh = () => {
+    qc.invalidateQueries({ queryKey: ["barbers"] });
+    qc.invalidateQueries({ queryKey: ["me"] });
+  };
+
+  if (LOGIN_OFF) return null;
+  const linkSelf = async (id: string) => {
+    if (!me) return;
+    const { error } = await supabase.from("barbers").update({ user_id: me.id, email: me.email }).eq("id", id);
+    if (error) toast.error(error.message);
+    else {
+      toast.success("Você agora é este barbeiro");
+      refresh();
+    }
+  };
+
+  return (
+    <section className="space-y-3">
+      <h2 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Acesso dos barbeiros</h2>
+      <div className="space-y-3">
+        {barbers.map((b) => (
+          <div key={b.id} className="rounded-2xl border border-border bg-card p-4">
+            <p className="font-medium">{b.name}</p>
+            {b.user_id ? (
+              <p className="text-sm text-muted-foreground">
+                {b.user_id === me?.id ? "Você (administrador)" : `Acesso: ${b.email ?? "criado"}`}
+              </p>
+            ) : (
+              <NewAccess barber={b} onDone={refresh} onSelf={!me?.barber ? () => linkSelf(b.id) : undefined} />
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function NewAccess({ barber, onDone, onSelf }: { barber: B; onDone: () => void; onSelf?: (() => void) | undefined }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [busy, setBusy] = useState(false);
+  const create = useServerFn(createBarberAccount);
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setBusy(true);
+    try {
+      await create({ data: { barberId: barber.id, email, password } });
+      toast.success(`Acesso criado para ${barber.name}. Passe o e-mail e a senha para ele.`);
+      onDone();
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : String(err));
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <form onSubmit={submit} className="mt-3 grid gap-2 sm:grid-cols-[1fr_1fr_auto]">
+      <input className={input} type="email" placeholder="E-mail" required value={email} onChange={(e) => setEmail(e.target.value)} />
+      <input className={input} type="text" placeholder="Senha (mín. 6)" required minLength={6} value={password} onChange={(e) => setPassword(e.target.value)} />
+      <button disabled={busy} className="rounded-xl bg-primary px-4 py-2.5 font-semibold text-primary-foreground disabled:opacity-50">
+        {busy ? "..." : "Criar acesso"}
+      </button>
+      {onSelf && (
+        <button type="button" onClick={onSelf} className="text-left text-sm text-muted-foreground underline-offset-4 hover:underline sm:col-span-3">
+          Este barbeiro sou eu
+        </button>
+      )}
+    </form>
+  );
+}

@@ -1,1 +1,153 @@
-LyogZXNsaW50LWRpc2FibGUgKi8KCi8vIEB0cy1ub2NoZWNrCgovLyBub2luc3BlY3Rpb24gSlNVbnVzZWRHbG9iYWxTeW1ib2xzCgovLyBUaGlzIGZpbGUgd2FzIGF1dG9tYXRpY2FsbHkgZ2VuZXJhdGVkIGJ5IFRhblN0YWNrIFJvdXRlci4KLy8gWW91IHNob3VsZCBOT1QgbWFrZSBhbnkgY2hhbmdlcyBpbiB0aGlzIGZpbGUgYXMgaXQgd2lsbCBiZSBvdmVyd3JpdHRlbi4KLy8gQWRkaXRpb25hbGx5LCB5b3Ugc2hvdWxkIGFsc28gZXhjbHVkZSB0aGlzIGZpbGUgZnJvbSB5b3VyIGxpbnRlciBhbmQvb3IgZm9ybWF0dGVyIHRvIHByZXZlbnQgaXQgZnJvbSBiZWluZyBjaGVja2VkIG9yIG1vZGlmaWVkLgoKaW1wb3J0IHsgUm91dGUgYXMgcm9vdFJvdXRlSW1wb3J0IH0gZnJvbSAnLi9yb3V0ZXMvX19yb290JwppbXBvcnQgeyBSb3V0ZSBhcyBBdXRoZW50aWNhdGVkUm91dGVSb3V0ZUltcG9ydCB9IGZyb20gJy4vcm91dGVzL19hdXRoZW50aWNhdGVkL3JvdXRlJwppbXBvcnQgeyBSb3V0ZSBhcyBBdXRoUm91dGVJbXBvcnQgfSBmcm9tICcuL3JvdXRlcy9hdXRoJwppbXBvcnQgeyBSb3V0ZSBhcyBBdXRoZW50aWNhdGVkSW5kZXhSb3V0ZUltcG9ydCB9IGZyb20gJy4vcm91dGVzL19hdXRoZW50aWNhdGVkL2luZGV4JwppbXBvcnQgeyBSb3V0ZSBhcyBBdXRoZW50aWNhdGVkQWp1c3Rlc1JvdXRlSW1wb3J0IH0gZnJvbSAnLi9yb3V0ZXMvX2F1dGhlbnRpY2F0ZWQvYWp1c3RlcycKaW1wb3J0IHsgUm91dGUgYXMgQXV0aGVudGljYXRlZFJlc3Vtb1JvdXRlSW1wb3J0IH0gZnJvbSAnLi9yb3V0ZXMvX2F1dGhlbnRpY2F0ZWQvcmVzdW1vJwoKY29uc3QgQXV0aGVudGljYXRlZFJvdXRlUm91dGUgPSBBdXRoZW50aWNhdGVkUm91dGVSb3V0ZUltcG9ydC51cGRhdGUoewogIGlkOiAnL19hdXRoZW50aWNhdGVkJywKICBnZXRQYXJlbnRSb3V0ZTogKCkgPT4gcm9vdFJvdXRlSW1wb3J0LAp9IGFzIGFueSkKY29uc3QgQXV0aFJvdXRlID0gQXV0aFJvdXRlSW1wb3J0LnVwZGF0ZSh7CiAgaWQ6ICcvYXV0aCcsCiAgcGF0aDogJy9hdXRoJywKICBnZXRQYXJlbnRSb3V0ZTogKCkgPT4gcm9vdFJvdXRlSW1wb3J0LAp9IGFzIGFueSkKY29uc3QgQXV0aGVudGljYXRlZEluZGV4Um91dGUgPSBBdXRoZW50aWNhdGVkSW5kZXhSb3V0ZUltcG9ydC51cGRhdGUoewogIGlkOiAnLycsCiAgcGF0aDogJy8nLAogIGdldFBhcmVudFJvdXRlOiAoKSA9PiBBdXRoZW50aWNhdGVkUm91dGVSb3V0ZSwKfSBhcyBhbnkpCmNvbnN0IEF1dGhlbnRpY2F0ZWRBanVzdGVzUm91dGUgPSBBdXRoZW50aWNhdGVkQWp1c3Rlc1JvdXRlSW1wb3J0LnVwZGF0ZSh7CiAgaWQ6ICcvYWp1c3RlcycsCiAgcGF0aDogJy9hanVzdGVzJywKICBnZXRQYXJlbnRSb3V0ZTogKCkgPT4gQXV0aGVudGljYXRlZFJvdXRlUm91dGUsCn0gYXMgYW55KQpjb25zdCBBdXRoZW50aWNhdGVkUmVzdW1vUm91dGUgPSBBdXRoZW50aWNhdGVkUmVzdW1vUm91dGVJbXBvcnQudXBkYXRlKHsKICBpZDogJy9yZXN1bW8nLAogIHBhdGg6ICcvcmVzdW1vJywKICBnZXRQYXJlbnRSb3V0ZTogKCkgPT4gQXV0aGVudGljYXRlZFJvdXRlUm91dGUsCn0gYXMgYW55KQoKZXhwb3J0IGludGVyZmFjZSBGaWxlUm91dGVzQnlGdWxsUGF0aCB7CiAgJy8nOiB0eXBlb2YgQXV0aGVudGljYXRlZEluZGV4Um91dGUKICAnL2F1dGgnOiB0eXBlb2YgQXV0aFJvdXRlCiAgJy9hanVzdGVzJzogdHlwZW9mIEF1dGhlbnRpY2F0ZWRBanVzdGVzUm91dGUKICAnL3Jlc3Vtbyc6IHR5cGVvZiBBdXRoZW50aWNhdGVkUmVzdW1vUm91dGUKfQpleHBvcnQgaW50ZXJmYWNlIEZpbGVSb3V0ZXNCeVRvIHsKICAnL2F1dGgnOiB0eXBlb2YgQXV0aFJvdXRlCiAgJy9hanVzdGVzJzogdHlwZW9mIEF1dGhlbnRpY2F0ZWRBanVzdGVzUm91dGUKICAnL3Jlc3Vtbyc6IHR5cGVvZiBBdXRoZW50aWNhdGVkUmVzdW1vUm91dGUKICAnLyc6IHR5cGVvZiBBdXRoZW50aWNhdGVkSW5kZXhSb3V0ZQp9CmV4cG9ydCBpbnRlcmZhY2UgRmlsZVJvdXRlc0J5SWQgewogIF9fcm9vdF9fOiB0eXBlb2Ygcm9vdFJvdXRlSW1wb3J0CiAgJy9fYXV0aGVudGljYXRlZCc6IHR5cGVvZiBBdXRoZW50aWNhdGVkUm91dGVSb3V0ZVdpdGhDaGlsZHJlbgogICcvYXV0aCc6IHR5cGVvZiBBdXRoUm91dGUKICAnL19hdXRoZW50aWNhdGVkL2FqdXN0ZXMnOiB0eXBlb2YgQXV0aGVudGljYXRlZEFqdXN0ZXNSb3V0ZQogICcvX2F1dGhlbnRpY2F0ZWQvcmVzdW1vJzogdHlwZW9mIEF1dGhlbnRpY2F0ZWRSZXN1bW9Sb3V0ZQogICcvX2F1dGhlbnRpY2F0ZWQvJzogdHlwZW9mIEF1dGhlbnRpY2F0ZWRJbmRleFJvdXRlCn0KZXhwb3J0IGludGVyZmFjZSBGaWxlUm91dGVUeXBlcyB7CiAgZmlsZVJvdXRlc0J5RnVsbFBhdGg6IEZpbGVSb3V0ZXNCeUZ1bGxQYXRoCiAgZnVsbFBhdGhzOiAnLycgfCAnL2F1dGgnIHwgJy9hanVzdGVzJyB8ICcvcmVzdW1vJwogIGZpbGVSb3V0ZXNCeVRvOiBGaWxlUm91dGVzQnlUbwogIHRvOiAnL2F1dGgnIHwgJy9hanVzdGVzJyB8ICcvcmVzdW1vJyB8ICcvJwogIGlkOgogICAgfCAnX19yb290X18nCiAgICB8ICcvX2F1dGhlbnRpY2F0ZWQnCiAgICB8ICcvYXV0aCcKICAgIHwgJy9fYXV0aGVudGljYXRlZC9hanVzdGVzJwogICAgfCAnL19hdXRoZW50aWNhdGVkL3Jlc3VtbycKICAgIHwgJy9fYXV0aGVudGljYXRlZC8nCiAgZmlsZVJvdXRlc0J5SWQ6IEZpbGVSb3V0ZXNCeUlkCn0KZXhwb3J0IGludGVyZmFjZSBSb290Um91dGVDaGlsZHJlbiB7CiAgQXV0aGVudGljYXRlZFJvdXRlUm91dGU6IHR5cGVvZiBBdXRoZW50aWNhdGVkUm91dGVSb3V0ZVdpdGhDaGlsZHJlbgogIEF1dGhSb3V0ZTogdHlwZW9mIEF1dGhSb3V0ZQp9CgpkZWNsYXJlIG1vZHVsZSAnQHRhbnN0YWNrL3JlYWN0LXJvdXRlcicgewogIGludGVyZmFjZSBGaWxlUm91dGVzQnlQYXRoIHsKICAgICcvX2F1dGhlbnRpY2F0ZWQnOiB7CiAgICAgIGlkOiAnL19hdXRoZW50aWNhdGVkJwogICAgICBwYXRoOiAnJwogICAgICBmdWxsUGF0aDogJy8nCiAgICAgIHByZUxvYWRlclJvdXRlOiB0eXBlb2YgQXV0aGVudGljYXRlZFJvdXRlUm91dGVJbXBvcnQKICAgICAgcGFyZW50Um91dGU6IHR5cGVvZiByb290Um91dGVJbXBvcnQKICAgIH0KICAgICcvYXV0aCc6IHsKICAgICAgaWQ6ICcvYXV0aCcKICAgICAgcGF0aDogJy9hdXRoJwogICAgICBmdWxsUGF0aDogJy9hdXRoJwogICAgICBwcmVMb2FkZXJSb3V0ZTogdHlwZW9mIEF1dGhSb3V0ZUltcG9ydAogICAgICBwYXJlbnRSb3V0ZTogdHlwZW9mIHJvb3RSb3V0ZUltcG9ydAogICAgfQogICAgJy9fYXV0aGVudGljYXRlZC8nOiB7CiAgICAgIGlkOiAnL19hdXRoZW50aWNhdGVkLycKICAgICAgcGF0aDogJy8nCiAgICAgIGZ1bGxQYXRoOiAnLycKICAgICAgcHJlTG9hZGVyUm91dGU6IHR5cGVvZiBBdXRoZW50aWNhdGVkSW5kZXhSb3V0ZUltcG9ydAogICAgICBwYXJlbnRSb3V0ZTogdHlwZW9mIEF1dGhlbnRpY2F0ZWRSb3V0ZVJvdXRlCiAgICB9CiAgICAnL19hdXRoZW50aWNhdGVkL2FqdXN0ZXMnOiB7CiAgICAgIGlkOiAnL19hdXRoZW50aWNhdGVkL2FqdXN0ZXMnCiAgICAgIHBhdGg6ICcvYWp1c3RlcycKICAgICAgZnVsbFBhdGg6ICcvYWp1c3RlcycKICAgICAgcHJlTG9hZGVyUm91dGU6IHR5cGVvZiBBdXRoZW50aWNhdGVkQWp1c3Rlc1JvdXRlSW1wb3J0CiAgICAgIHBhcmVudFJvdXRlOiB0eXBlb2YgQXV0aGVudGljYXRlZFJvdXRlUm91dGUKICAgIH0KICAgICcvX2F1dGhlbnRpY2F0ZWQvcmVzdW1vJzogewogICAgICBpZDogJy9fYXV0aGVudGljYXRlZC9yZXN1bW8nCiAgICAgIHBhdGg6ICcvcmVzdW1vJwogICAgICBmdWxsUGF0aDogJy9yZXN1bW8nCiAgICAgIHByZUxvYWRlclJvdXRlOiB0eXBlb2YgQXV0aGVudGljYXRlZFJlc3Vtb1JvdXRlSW1wb3J0CiAgICAgIHBhcmVudFJvdXRlOiB0eXBlb2YgQXV0aGVudGljYXRlZFJvdXRlUm91dGUKICAgIH0KICB9Cn0KCmludGVyZmFjZSBBdXRoZW50aWNhdGVkUm91dGVSb3V0ZUNoaWxkcmVuIHsKICBBdXRoZW50aWNhdGVkQWp1c3Rlc1JvdXRlOiB0eXBlb2YgQXV0aGVudGljYXRlZEFqdXN0ZXNSb3V0ZQogIEF1dGhlbnRpY2F0ZWRSZXN1bW9Sb3V0ZTogdHlwZW9mIEF1dGhlbnRpY2F0ZWRSZXN1bW9Sb3V0ZQogIEF1dGhlbnRpY2F0ZWRJbmRleFJvdXRlOiB0eXBlb2YgQXV0aGVudGljYXRlZEluZGV4Um91dGUKfQoKY29uc3QgQXV0aGVudGljYXRlZFJvdXRlUm91dGVDaGlsZHJlbjogQXV0aGVudGljYXRlZFJvdXRlUm91dGVDaGlsZHJlbiA9IHsKICBBdXRoZW50aWNhdGVkQWp1c3Rlc1JvdXRlOiBBdXRoZW50aWNhdGVkQWp1c3Rlc1JvdXRlLAogIEF1dGhlbnRpY2F0ZWRSZXN1bW9Sb3V0ZTogQXV0aGVudGljYXRlZFJlc3Vtb1JvdXRlLAogIEF1dGhlbnRpY2F0ZWRJbmRleFJvdXRlOiBBdXRoZW50aWNhdGVkSW5kZXhSb3V0ZSwKfQoKY29uc3QgQXV0aGVudGljYXRlZFJvdXRlUm91dGVXaXRoQ2hpbGRyZW4gPQogIEF1dGhlbnRpY2F0ZWRSb3V0ZVJvdXRlLl9hZGRGaWxlQ2hpbGRyZW4oQXV0aGVudGljYXRlZFJvdXRlUm91dGVDaGlsZHJlbikKCmNvbnN0IHJvb3RSb3V0ZUNoaWxkcmVuOiBSb290Um91dGVDaGlsZHJlbiA9IHsKICBBdXRoZW50aWNhdGVkUm91dGVSb3V0ZTogQXV0aGVudGljYXRlZFJvdXRlUm91dGVXaXRoQ2hpbGRyZW4sCiAgQXV0aFJvdXRlOiBBdXRoUm91dGUsCn0KZXhwb3J0IGNvbnN0IHJvdXRlVHJlZSA9IHJvb3RSb3V0ZUltcG9ydAogIC5fYWRkRmlsZUNoaWxkcmVuKHJvb3RSb3V0ZUNoaWxkcmVuKQogIC5fYWRkRmlsZVR5cGVzPEZpbGVSb3V0ZVR5cGVzPigpCgppbXBvcnQgdHlwZSB7IGdldFJvdXRlciB9IGZyb20gJy4vcm91dGVyLnRzeCcKaW1wb3J0IHR5cGUgeyBzdGFydEluc3RhbmNlIH0gZnJvbSAnLi9zdGFydC50cycKZGVjbGFyZSBtb2R1bGUgJ0B0YW5zdGFjay9yZWFjdC1zdGFydCcgewogIGludGVyZmFjZSBSZWdpc3RlciB7CiAgICBzc3I6IHRydWUKICAgIHJvdXRlcjogQXdhaXRlZDxSZXR1cm5UeXBlPHR5cGVvZiBnZXRSb3V0ZXI+PgogICAgY29uZmlnOiBBd2FpdGVkPFJldHVyblR5cGU8dHlwZW9mIHN0YXJ0SW5zdGFuY2UuZ2V0T3B0aW9ucz4+CiAgfQp9Cg==
+/* eslint-disable */
+
+// @ts-nocheck
+
+// noinspection JSUnusedGlobalSymbols
+
+// This file was automatically generated by TanStack Router.
+// You should NOT make any changes in this file as it will be overwritten.
+// Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
+
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
+import { Route as AuthenticatedAjustesRouteImport } from './routes/_authenticated/ajustes'
+import { Route as AuthenticatedResumoRouteImport } from './routes/_authenticated/resumo'
+
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedIndexRoute = AuthenticatedIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedAjustesRoute = AuthenticatedAjustesRouteImport.update({
+  id: '/ajustes',
+  path: '/ajustes',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedResumoRoute = AuthenticatedResumoRouteImport.update({
+  id: '/resumo',
+  path: '/resumo',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+
+export interface FileRoutesByFullPath {
+  '/': typeof AuthenticatedIndexRoute
+  '/auth': typeof AuthRoute
+  '/ajustes': typeof AuthenticatedAjustesRoute
+  '/resumo': typeof AuthenticatedResumoRoute
+}
+export interface FileRoutesByTo {
+  '/auth': typeof AuthRoute
+  '/ajustes': typeof AuthenticatedAjustesRoute
+  '/resumo': typeof AuthenticatedResumoRoute
+  '/': typeof AuthenticatedIndexRoute
+}
+export interface FileRoutesById {
+  __root__: typeof rootRouteImport
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/auth': typeof AuthRoute
+  '/_authenticated/ajustes': typeof AuthenticatedAjustesRoute
+  '/_authenticated/resumo': typeof AuthenticatedResumoRoute
+  '/_authenticated/': typeof AuthenticatedIndexRoute
+}
+export interface FileRouteTypes {
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/auth' | '/ajustes' | '/resumo'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/auth' | '/ajustes' | '/resumo' | '/'
+  id:
+    | '__root__'
+    | '/_authenticated'
+    | '/auth'
+    | '/_authenticated/ajustes'
+    | '/_authenticated/resumo'
+    | '/_authenticated/'
+  fileRoutesById: FileRoutesById
+}
+export interface RootRouteChildren {
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AuthRoute: typeof AuthRoute
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/': {
+      id: '/_authenticated/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedIndexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/ajustes': {
+      id: '/_authenticated/ajustes'
+      path: '/ajustes'
+      fullPath: '/ajustes'
+      preLoaderRoute: typeof AuthenticatedAjustesRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/resumo': {
+      id: '/_authenticated/resumo'
+      path: '/resumo'
+      fullPath: '/resumo'
+      preLoaderRoute: typeof AuthenticatedResumoRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+  }
+}
+
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAjustesRoute: typeof AuthenticatedAjustesRoute
+  AuthenticatedResumoRoute: typeof AuthenticatedResumoRoute
+  AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAjustesRoute: AuthenticatedAjustesRoute,
+  AuthenticatedResumoRoute: AuthenticatedResumoRoute,
+  AuthenticatedIndexRoute: AuthenticatedIndexRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
+const rootRouteChildren: RootRouteChildren = {
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AuthRoute: AuthRoute,
+}
+export const routeTree = rootRouteImport
+  ._addFileChildren(rootRouteChildren)
+  ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

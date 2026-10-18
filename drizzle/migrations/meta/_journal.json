@@ -1,1 +1,27 @@
-ewogICJ2ZXJzaW9uIjogIjciLAogICJkaWFsZWN0IjogInBvc3RncmVzcWwiLAogICJlbnRyaWVzIjogWwogICAgewogICAgICAiaWR4IjogMCwKICAgICAgInZlcnNpb24iOiAiNyIsCiAgICAgICJ3aGVuIjogMTc5MjI0NjUwOTE4NCwKICAgICAgInRhZyI6ICIwMDAwX21pZ3JhdGlvbiIsCiAgICAgICJicmVha3BvaW50cyI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZHgiOiAxLAogICAgICAidmVyc2lvbiI6ICI3IiwKICAgICAgIndoZW4iOiAxNzkyMjYyMjAxNDM1LAogICAgICAidGFnIjogIjAwMDFfcm9sZXNfYW5kX3ByaXZhdGVfYWNjZXNzIiwKICAgICAgImJyZWFrcG9pbnRzIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkeCI6IDIsCiAgICAgICJ2ZXJzaW9uIjogIjciLAogICAgICAid2hlbiI6IDE3OTIyNjI5MjAzNjEsCiAgICAgICJ0YWciOiAiMDAwMl9yZW9wZW5fYWNjZXNzX3dpdGhvdXRfbG9naW4iLAogICAgICAiYnJlYWtwb2ludHMiOiB0cnVlCiAgICB9CiAgXQp9Cg==
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1792246509184,
+      "tag": "0000_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792262201435,
+      "tag": "0001_roles_and_private_access",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792262920361,
+      "tag": "0002_reopen_access_without_login",
+      "breakpoints": true
+    }
+  ]
+}

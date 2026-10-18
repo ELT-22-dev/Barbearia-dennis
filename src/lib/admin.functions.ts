@@ -1,1 +1,66 @@
-aW1wb3J0IHsgY3JlYXRlU2VydmVyRm4gfSBmcm9tICJAdGFuc3RhY2svcmVhY3Qtc3RhcnQiOwppbXBvcnQgeyByZXF1aXJlU3VwYWJhc2VBdXRoIH0gZnJvbSAiQC9pbnRlZ3JhdGlvbnMvc3VwYWJhc2UvYXV0aC1taWRkbGV3YXJlIjsKaW1wb3J0IHsgaXNBZG1pbkVtYWlsIH0gZnJvbSAiLi9hdXRoIjsKCmNvbnN0IGNoZWNrUGFzc3dvcmQgPSAocDogdW5rbm93bikgPT4gewogIGlmICh0eXBlb2YgcCAhPT0gInN0cmluZyIgfHwgcC5sZW5ndGggPCA2KSB0aHJvdyBuZXcgRXJyb3IoIkEgc2VuaGEgcHJlY2lzYSB0ZXIgcGVsbyBtZW5vcyA2IGNhcmFjdGVyZXMiKTsKICByZXR1cm4gcDsKfTsKCi8vIEZpcnN0IGFjY2Vzczogb25seSB0aGUgYWRtaW4gZW1haWwgY2FuIGNyZWF0ZSBpdHMgb3duIGFjY291bnQsIGFuZCBvbmx5IG9uY2UuCmV4cG9ydCBjb25zdCBzZXR1cEFkbWluID0gY3JlYXRlU2VydmVyRm4oeyBtZXRob2Q6ICJQT1NUIiB9KQogIC5pbnB1dFZhbGlkYXRvcigoaTogeyBlbWFpbDogc3RyaW5nOyBwYXNzd29yZDogc3RyaW5nIH0pID0+ICh7CiAgICBlbWFpbDogU3RyaW5nKGkuZW1haWwgPz8gIiIpLnRyaW0oKS50b0xvd2VyQ2FzZSgpLAogICAgcGFzc3dvcmQ6IGNoZWNrUGFzc3dvcmQoaS5wYXNzd29yZCksCiAgfSkpCiAgLmhhbmRsZXIoYXN5bmMgKHsgZGF0YSB9KSA9PiB7CiAgICBpZiAoIWlzQWRtaW5FbWFpbChkYXRhLmVtYWlsKSkgdGhyb3cgbmV3IEVycm9yKCJFc3RlIGUtbWFpbCBuw6NvIMOpIG8gZG8gYWRtaW5pc3RyYWRvciIpOwogICAgY29uc3QgeyBzdXBhYmFzZUFkbWluIH0gPSBhd2FpdCBpbXBvcnQoIkAvaW50ZWdyYXRpb25zL3N1cGFiYXNlL2NsaWVudC5zZXJ2ZXIiKTsKICAgIGNvbnN0IHsgY291bnQgfSA9IGF3YWl0IHN1cGFiYXNlQWRtaW4KICAgICAgLmZyb20oInVzZXJfcm9sZXMiKQogICAgICAuc2VsZWN0KCJpZCIsIHsgY291bnQ6ICJleGFjdCIsIGhlYWQ6IHRydWUgfSkKICAgICAgLmVxKCJyb2xlIiwgImFkbWluIik7CiAgICBpZiAoY291bnQpIHRocm93IG5ldyBFcnJvcigiTyBhZG1pbmlzdHJhZG9yIGrDoSB0ZW0gY29udGEuIFVzZSBFbnRyYXIuIik7CiAgICBjb25zdCB7IGRhdGE6IGNyZWF0ZWQsIGVycm9yIH0gPSBhd2FpdCBzdXBhYmFzZUFkbWluLmF1dGguYWRtaW4uY3JlYXRlVXNlcih7CiAgICAgIGVtYWlsOiBkYXRhLmVtYWlsLAogICAgICBwYXNzd29yZDogZGF0YS5wYXNzd29yZCwKICAgICAgZW1haWxfY29uZmlybTogdHJ1ZSwKICAgIH0pOwogICAgaWYgKGVycm9yIHx8ICFjcmVhdGVkLnVzZXIpIHRocm93IG5ldyBFcnJvcihlcnJvcj8ubWVzc2FnZSA/PyAiTsOjbyBmb2kgcG9zc8OtdmVsIGNyaWFyIGEgY29udGEiKTsKICAgIGNvbnN0IHsgZXJyb3I6IHJFcnIgfSA9IGF3YWl0IHN1cGFiYXNlQWRtaW4KICAgICAgLmZyb20oInVzZXJfcm9sZXMiKQogICAgICAuaW5zZXJ0KHsgdXNlcl9pZDogY3JlYXRlZC51c2VyLmlkLCByb2xlOiAiYWRtaW4iIH0pOwogICAgaWYgKHJFcnIpIHRocm93IG5ldyBFcnJvcihyRXJyLm1lc3NhZ2UpOwogICAgcmV0dXJuIHsgb2s6IHRydWUgfTsKICB9KTsKCmV4cG9ydCBjb25zdCBjcmVhdGVCYXJiZXJBY2NvdW50ID0gY3JlYXRlU2VydmVyRm4oeyBtZXRob2Q6ICJQT1NUIiB9KQogIC5taWRkbGV3YXJlKFtyZXF1aXJlU3VwYWJhc2VBdXRoXSkKICAuaW5wdXRWYWxpZGF0b3IoKGk6IHsgYmFyYmVySWQ6IHN0cmluZzsgZW1haWw6IHN0cmluZzsgcGFzc3dvcmQ6IHN0cmluZyB9KSA9PiAoewogICAgYmFyYmVySWQ6IFN0cmluZyhpLmJhcmJlcklkKSwKICAgIGVtYWlsOiBTdHJpbmcoaS5lbWFpbCA/PyAiIikudHJpbSgpLnRvTG93ZXJDYXNlKCksCiAgICBwYXNzd29yZDogY2hlY2tQYXNzd29yZChpLnBhc3N3b3JkKSwKICB9KSkKICAuaGFuZGxlcihhc3luYyAoeyBkYXRhLCBjb250ZXh0IH0pID0+IHsKICAgIGNvbnN0IHsgZGF0YTogaXNBZG1pbiB9ID0gYXdhaXQgY29udGV4dC5zdXBhYmFzZS5ycGMoImhhc19yb2xlIiwgewogICAgICBfdXNlcl9pZDogY29udGV4dC51c2VySWQsCiAgICAgIF9yb2xlOiAiYWRtaW4iLAogICAgfSk7CiAgICBpZiAoIWlzQWRtaW4pIHRocm93IG5ldyBFcnJvcigiQXBlbmFzIG8gYWRtaW5pc3RyYWRvciBwb2RlIGNyaWFyIGFjZXNzb3MiKTsKICAgIGlmICghZGF0YS5lbWFpbC5pbmNsdWRlcygiQCIpKSB0aHJvdyBuZXcgRXJyb3IoIkUtbWFpbCBpbnbDoWxpZG8iKTsKICAgIGNvbnN0IHsgc3VwYWJhc2VBZG1pbiB9ID0gYXdhaXQgaW1wb3J0KCJAL2ludGVncmF0aW9ucy9zdXBhYmFzZS9jbGllbnQuc2VydmVyIik7CiAgICBjb25zdCB7IGRhdGE6IGNyZWF0ZWQsIGVycm9yIH0gPSBhd2FpdCBzdXBhYmFzZUFkbWluLmF1dGguYWRtaW4uY3JlYXRlVXNlcih7CiAgICAgIGVtYWlsOiBkYXRhLmVtYWlsLAogICAgICBwYXNzd29yZDogZGF0YS5wYXNzd29yZCwKICAgICAgZW1haWxfY29uZmlybTogdHJ1ZSwKICAgIH0pOwogICAgaWYgKGVycm9yIHx8ICFjcmVhdGVkLnVzZXIpIHRocm93IG5ldyBFcnJvcihlcnJvcj8ubWVzc2FnZSA/PyAiTsOjbyBmb2kgcG9zc8OtdmVsIGNyaWFyIGEgY29udGEiKTsKICAgIGNvbnN0IHVpZCA9IGNyZWF0ZWQudXNlci5pZDsKICAgIGF3YWl0IHN1cGFiYXNlQWRtaW4uZnJvbSgidXNlcl9yb2xlcyIpLmluc2VydCh7IHVzZXJfaWQ6IHVpZCwgcm9sZTogImJhcmJlciIgfSk7CiAgICBjb25zdCB7IGVycm9yOiBiRXJyIH0gPSBhd2FpdCBzdXBhYmFzZUFkbWluCiAgICAgIC5mcm9tKCJiYXJiZXJzIikKICAgICAgLnVwZGF0ZSh7IHVzZXJfaWQ6IHVpZCwgZW1haWw6IGRhdGEuZW1haWwgfSkKICAgICAgLmVxKCJpZCIsIGRhdGEuYmFyYmVySWQpOwogICAgaWYgKGJFcnIpIHRocm93IG5ldyBFcnJvcihiRXJyLm1lc3NhZ2UpOwogICAgcmV0dXJuIHsgb2s6IHRydWUgfTsKICB9KTsK
+import { createServerFn } from "@tanstack/react-start";
+import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+import { isAdminEmail } from "./auth";
+
+const checkPassword = (p: unknown) => {
+  if (typeof p !== "string" || p.length < 6) throw new Error("A senha precisa ter pelo menos 6 caracteres");
+  return p;
+};
+
+// First access: only the admin email can create its own account, and only once.
+export const setupAdmin = createServerFn({ method: "POST" })
+  .inputValidator((i: { email: string; password: string }) => ({
+    email: String(i.email ?? "").trim().toLowerCase(),
+    password: checkPassword(i.password),
+  }))
+  .handler(async ({ data }) => {
+    if (!isAdminEmail(data.email)) throw new Error("Este e-mail não é o do administrador");
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const { count } = await supabaseAdmin
+      .from("user_roles")
+      .select("id", { count: "exact", head: true })
+      .eq("role", "admin");
+    if (count) throw new Error("O administrador já tem conta. Use Entrar.");
+    const { data: created, error } = await supabaseAdmin.auth.admin.createUser({
+      email: data.email,
+      password: data.password,
+      email_confirm: true,
+    });
+    if (error || !created.user) throw new Error(error?.message ?? "Não foi possível criar a conta");
+    const { error: rErr } = await supabaseAdmin
+      .from("user_roles")
+      .insert({ user_id: created.user.id, role: "admin" });
+    if (rErr) throw new Error(rErr.message);
+    return { ok: true };
+  });
+
+export const createBarberAccount = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((i: { barberId: string; email: string; password: string }) => ({
+    barberId: String(i.barberId),
+    email: String(i.email ?? "").trim().toLowerCase(),
+    password: checkPassword(i.password),
+  }))
+  .handler(async ({ data, context }) => {
+    const { data: isAdmin } = await context.supabase.rpc("has_role", {
+      _user_id: context.userId,
+      _role: "admin",
+    });
+    if (!isAdmin) throw new Error("Apenas o administrador pode criar acessos");
+    if (!data.email.includes("@")) throw new Error("E-mail inválido");
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const { data: created, error } = await supabaseAdmin.auth.admin.createUser({
+      email: data.email,
+      password: data.password,
+      email_confirm: true,
+    });
+    if (error || !created.user) throw new Error(error?.message ?? "Não foi possível criar a conta");
+    const uid = created.user.id;
+    await supabaseAdmin.from("user_roles").insert({ user_id: uid, role: "barber" });
+    const { error: bErr } = await supabaseAdmin
+      .from("barbers")
+      .update({ user_id: uid, email: data.email })
+      .eq("id", data.barberId);
+    if (bErr) throw new Error(bErr.message);
+    return { ok: true };
+  });

@@ -1,1 +1,17 @@
-aW1wb3J0IHsgY3JlYXRlRmlsZVJvdXRlLCBPdXRsZXQgfSBmcm9tICJAdGFuc3RhY2svcmVhY3Qtcm91dGVyIjsKaW1wb3J0IHsgQXBwU2hlbGwgfSBmcm9tICJAL2NvbXBvbmVudHMvQXBwU2hlbGwiOwppbXBvcnQgeyBtZVF1ZXJ5IH0gZnJvbSAiQC9saWIvYXV0aCI7CgovLyBMb2dpbiB0ZW1wb3JhcmlseSBvZmY6IGV2ZXJ5b25lIHVzZXMgdGhlIGFwcCB3aXRoIGZ1bGwgKGFkbWluKSB2aWV3LgpleHBvcnQgY29uc3QgUm91dGUgPSBjcmVhdGVGaWxlUm91dGUoIi9fYXV0aGVudGljYXRlZCIpKHsKICBzc3I6IGZhbHNlLAogIGJlZm9yZUxvYWQ6IGFzeW5jICh7IGNvbnRleHQgfSkgPT4gewogICAgY29uc3QgbWUgPSBhd2FpdCBjb250ZXh0LnF1ZXJ5Q2xpZW50LmVuc3VyZVF1ZXJ5RGF0YShtZVF1ZXJ5KTsKICAgIHJldHVybiB7IG1lIH07CiAgfSwKICBjb21wb25lbnQ6ICgpID0+ICgKICAgIDxBcHBTaGVsbD4KICAgICAgPE91dGxldCAvPgogICAgPC9BcHBTaGVsbD4KICApLAp9KTsK
+import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { AppShell } from "@/components/AppShell";
+import { meQuery } from "@/lib/auth";
+
+// Login temporarily off: everyone uses the app with full (admin) view.
+export const Route = createFileRoute("/_authenticated")({
+  ssr: false,
+  beforeLoad: async ({ context }) => {
+    const me = await context.queryClient.ensureQueryData(meQuery);
+    return { me };
+  },
+  component: () => (
+    <AppShell>
+      <Outlet />
+    </AppShell>
+  ),
+});
