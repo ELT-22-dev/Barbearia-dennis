@@ -61,10 +61,11 @@ function Body({ data, onRemove }: { data: Appt[]; onRemove: (id: string) => void
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
         <Stat label="Total" value={brl(s.total)} sub={`${s.count} atendimentos`} />
         <Stat label="Barbearia (50%)" value={brl(s.shop)} accent />
-        <div className="col-span-2 grid grid-cols-3 gap-2 rounded-2xl border border-border bg-card p-4 lg:col-span-1">
+        {/* celular: 3 colunas; desktop (card estreito): uma linha por forma de pagamento */}
+        <div className="col-span-2 grid grid-cols-3 gap-2 rounded-2xl border border-border bg-card p-4 lg:col-span-1 lg:grid-cols-1 lg:content-center lg:gap-1.5">
           {(Object.keys(PAYMENT_LABELS) as PaymentMethod[]).map((k) => (
-            <div key={k}>
-              <p className="text-xs text-muted-foreground">{PAYMENT_LABELS[k]}</p>
+            <div key={k} className="lg:flex lg:items-baseline lg:justify-between">
+              <p className="text-xs text-muted-foreground lg:text-sm">{PAYMENT_LABELS[k]}</p>
               <p className="font-semibold">{brl(s.byPayment[k])}</p>
             </div>
           ))}

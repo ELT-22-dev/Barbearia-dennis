@@ -7,7 +7,10 @@ import { parsePrice, type Barber, type Service } from "@/lib/barber";
 import { api, notifyChanged, useData } from "@/lib/client";
 import { LoadError, Loading } from "./States";
 
-const input = "w-full rounded-xl border border-input bg-card px-3 py-2.5 text-base outline-none focus:border-primary";
+const field = "rounded-xl border border-input bg-card px-3 py-2.5 text-base outline-none focus:border-primary";
+const input = `w-full ${field}`;
+const nameInput = `min-w-0 flex-1 ${field}`;
+const priceInput = `w-24 shrink-0 ${field}`;
 
 async function run(action: Promise<unknown>, msg = "Salvo") {
   try {
@@ -88,7 +91,7 @@ export function Settings() {
               <input
                 aria-label="Nome do serviço"
                 defaultValue={s.name}
-                className={input}
+                className={nameInput}
                 onBlur={(e) => {
                   const v = e.target.value.trim();
                   if (v && v !== s.name) updateService(s.id, { name: v });
@@ -98,7 +101,7 @@ export function Settings() {
                 aria-label="Preço"
                 defaultValue={String(s.price).replace(".", ",")}
                 inputMode="decimal"
-                className={`${input} w-28`}
+                className={priceInput}
                 onBlur={(e) => {
                   const v = parsePrice(e.target.value);
                   if (v !== null && v !== s.price) updateService(s.id, { price: v });
@@ -114,13 +117,13 @@ export function Settings() {
             </div>
           ))}
           <div className="flex gap-2 pt-2">
-            <input placeholder="Novo serviço" value={newName} onChange={(e) => setNewName(e.target.value)} className={input} />
+            <input placeholder="Novo serviço" value={newName} onChange={(e) => setNewName(e.target.value)} className={nameInput} />
             <input
               placeholder="Preço"
               inputMode="decimal"
               value={newPrice}
               onChange={(e) => setNewPrice(e.target.value)}
-              className={`${input} w-28`}
+              className={priceInput}
             />
             <button onClick={addService} aria-label="Adicionar" className="rounded-xl bg-primary px-3 text-primary-foreground">
               <Plus className="h-5 w-5" />

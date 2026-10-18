@@ -10,11 +10,18 @@ const outfit = Outfit({ subsets: ["latin"], weight: ["500", "600", "700"], varia
 export const metadata: Metadata = {
   title: { default: "Barbearia", template: "%s — Barbearia" },
   description: "Controle de atendimentos e divisão 50/50 da barbearia.",
+  applicationName: "Barbearia",
+  appleWebApp: { capable: true, title: "Barbearia", statusBarStyle: "default" },
   openGraph: { type: "website" },
   twitter: { card: "summary_large_image" },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1 };
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#f8f6f2",
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
