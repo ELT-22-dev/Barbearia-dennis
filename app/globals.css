@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-figtree), system-ui, sans-serif;
+  --font-display: var(--font-outfit), system-ui, sans-serif;
+  --shadow-soft: 0 6px 20px -8px color-mix(in oklab, var(--foreground) 25%, transparent);
+}
+
+@utility pole {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--pole-red) 0 6px,
+    var(--card) 6px 12px,
+    var(--pole-blue) 12px 18px,
+    var(--card) 18px 24px
+  );
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+:root {
+  --radius: 0.75rem;
+  --pole-red: oklch(0.58 0.19 27);
+  --pole-blue: oklch(0.45 0.13 255);
+  --background: oklch(0.975 0.006 80);
+  --foreground: oklch(0.2 0.01 60);
+  --card: oklch(0.995 0.003 80);
+  --primary: oklch(0.22 0.01 60);
+  --primary-foreground: oklch(0.98 0.005 80);
+  --secondary: oklch(0.93 0.008 80);
+  --muted-foreground: oklch(0.5 0.012 60);
+  --accent: oklch(0.58 0.19 27);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.89 0.008 80);
+  --input: oklch(0.87 0.008 80);
+  --ring: oklch(0.58 0.19 27);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}

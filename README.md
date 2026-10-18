@@ -1,29 +1,45 @@
-# Welcome to your Lovable project
+# Barbearia Dennis
 
-This project was built with [Lovable](https://lovable.dev).
+Controle de atendimentos da barbearia: registra cada corte (barbeiro, serviço,
+forma de pagamento), mostra na hora a divisão 50/50 e o resumo do dia, da
+semana e do mês. Aparelhos abertos tocam um aviso quando outro aparelho
+registra um atendimento.
 
-## Build with Lovable
+Acesso aberto (sem login): quem tem o link usa todas as telas.
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Stack
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Next.js (App Router)**: telas em `app/` e `components/`
+- **API routes** em `app/api/*` são o backend (validação e preço vêm do servidor)
+- **Neon Postgres**: o esquema e os dados iniciais são criados sozinhos no
+  primeiro acesso (`lib/db.ts`)
+- Deploy único na **Vercel**: cada `git push` na `main` publica tudo
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Rodar localmente
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+npm install
+npm run dev     # sem DATABASE_URL usa um Postgres local (PGlite) em .pglite/
+npm test        # regras da divisão + fluxo completo das API routes
 ```
 
-## Built with
+Para usar o Neon localmente, crie `.env.local` com `DATABASE_URL` (veja
+`.env.example`).
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+## Variáveis de ambiente (painel da Vercel)
+
+| Nome | Origem |
+| --- | --- |
+| `DATABASE_URL` | Criada pela integração Neon (Storage → Neon) conectada ao projeto |
+
+## API
+
+| Método | Rota | O que faz |
+| --- | --- | --- |
+| GET | `/api/barbers` | Lista barbeiros |
+| PATCH | `/api/barbers/:id` | Renomeia `{ name }` |
+| GET / POST | `/api/services` | Lista ativos / cria `{ name, price }` |
+| PATCH / DELETE | `/api/services/:id` | Edita `{ name?, price? }` / remove (lógico) |
+| GET | `/api/appointments?since=&after=&limit=` | Lista lançamentos |
+| POST | `/api/appointments` | Registra `{ barber_id, service_id, payment_method }` |
+| DELETE | `/api/appointments/:id` | Apaga lançamento |
