@@ -2,8 +2,8 @@
 
 Controle de atendimentos da barbearia: registra cada corte (barbeiro, serviço,
 forma de pagamento), mostra na hora a divisão 50/50 e o resumo do dia, da
-semana e do mês. O administrador ouve um aviso quando outro aparelho registra
-um atendimento.
+semana e do mês. O administrador recebe uma notificação push a cada corte que os
+barbeiros registram, corrigem ou apagam.
 
 ## Acesso
 
@@ -12,8 +12,10 @@ Cada pessoa entra tocando no próprio nome e digitando a senha.
 - **Administrador (Dennis)**: vê tudo (Resumo, histórico, Ajustes), registra para
   qualquer barbeiro e, em **Ajustes → Acesso**, cria, troca ou remove a senha
   dos outros.
-- **Barbeiros**: só a tela *Novo atendimento*, sempre em nome próprio. Não veem
-  histórico nem editam nada (bloqueado também na API).
+- **Barbeiros**: *Novo atendimento* (sempre em nome próprio) e *Meus cortes*,
+  onde veem, corrigem (serviço/pagamento) e apagam só os próprios lançamentos.
+  Não veem os dos outros nem mexem em serviços, preços ou acessos (bloqueado
+  também na API).
 - 5 senhas erradas seguidas bloqueiam o login daquela pessoa por 10 minutos.
 - Trocar a senha ou remover o acesso desloga a pessoa na hora.
 - Primeiro acesso / senha esquecida do administrador: na tela de login, Dennis →
@@ -45,6 +47,14 @@ Para usar o Neon localmente, crie `.env.local` com `DATABASE_URL` (veja
 | `DATABASE_URL` | Criada pela integração Neon (Storage → Neon) conectada ao projeto |
 | `AUTH_SECRET` | Segredo aleatório que assina as sessões (trocar desloga todo mundo) |
 | `ADMIN_RECOVERY_CODE` | Código para o administrador criar/recuperar a senha |
+| `VAPID_PUBLIC_KEY` / `VAPID_PRIVATE_KEY` | Chaves das notificações push (`npx web-push generate-vapid-keys`) |
+| `VAPID_SUBJECT` | Contato do remetente das notificações (URL do app) |
+
+## Notificações
+
+Em **Ajustes → Notificações** (ou no aviso do topo), o administrador ativa em cada
+aparelho. No iPhone só funciona com o app adicionado à Tela de Início (iOS 16.4+).
+O service worker é `public/sw.js`.
 
 ## API
 
@@ -63,6 +73,8 @@ Todas exigem sessão (cookie httpOnly com JWT), exceto login/recuperação.
 | GET | `/api/services` | logado | Lista ativos |
 | POST | `/api/services` | admin | Cria `{ name, price }` |
 | PATCH / DELETE | `/api/services/:id` | admin | Edita `{ name?, price? }` / remove (lógico) |
-| GET | `/api/appointments?since=&after=&limit=` | admin | Lista lançamentos |
+| GET | `/api/appointments?since=&after=&limit=` | logado | Lista lançamentos (barbeiro: só os dele) |
 | POST | `/api/appointments` | logado | Registra `{ barber_id, service_id, payment_method }` (barbeiro: sempre ele mesmo) |
-| DELETE | `/api/appointments/:id` | admin | Apaga lançamento |
+| PATCH | `/api/appointments/:id` | logado | Corrige `{ service_id?, payment_method?, barber_id? (admin) }` (barbeiro: só os dele) |
+| DELETE | `/api/appointments/:id` | logado | Apaga lançamento (barbeiro: só os dele) |
+| POST / DELETE | `/api/push` | admin | Ativa/desativa notificações deste aparelho |

@@ -16,7 +16,8 @@
     "next": "^16.4.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "sonner": "^2.0.8"
+    "sonner": "^2.0.8",
+    "web-push": "^3.6.7"
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.10",
@@ -24,6 +25,7 @@
     "@types/node": "^22.16.5",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
+    "@types/web-push": "^3.6.4",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.8.3",
     "vitest": "^5.0.5"

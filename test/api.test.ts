@@ -1,6 +1,20 @@
 // Fluxo completo das API routes contra um Postgres real (PGlite em memória),
 // incluindo login e o que cada papel (admin x barbeiro) pode fazer.
-import { beforeAll, describe, expect, it } from "vitest";
+import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
+
+// Envio de push simulado: registramos o que seria mandado para cada aparelho.
+const sent = vi.hoisted(() => [] as { endpoint: string; payload: { title: string; body: string } }[]);
+vi.mock("web-push", () => ({
+  default: {
+    setVapidDetails: () => {},
+    sendNotification: async (sub: { endpoint: string }, payload: string) => {
+      sent.push({ endpoint: sub.endpoint, payload: JSON.parse(payload) });
+      if (sub.endpoint.includes("expirado")) throw Object.assign(new Error("Gone"), { statusCode: 410 });
+    },
+  },
+}));
+process.env.VAPID_PUBLIC_KEY = "chave-publica-teste";
+process.env.VAPID_PRIVATE_KEY = "chave-privada-teste";
 import * as appointments from "@/app/api/appointments/route";
 import * as appointment from "@/app/api/appointments/[id]/route";
 import * as login from "@/app/api/auth/login/route";
@@ -8,6 +22,7 @@ import * as recover from "@/app/api/auth/recover/route";
 import * as barbers from "@/app/api/barbers/route";
 import * as barber from "@/app/api/barbers/[id]/route";
 import * as access from "@/app/api/barbers/[id]/access/route";
+import * as push from "@/app/api/push/route";
 import * as services from "@/app/api/services/route";
 import * as service from "@/app/api/services/[id]/route";
 import type { Appt, Barber, Service } from "@/lib/barber";
@@ -82,7 +97,7 @@ describe("login e acesso", () => {
     await cookieOf(login.POST(req(undefined, "POST", { barber_id: ids.b3, password: "4321" })));
   });
 
-  it("barbeiro só anota corte próprio e não vê nem edita nada", async () => {
+  it("barbeiro anota corte próprio e não mexe em nada da barbearia", async () => {
     const eddy = await cookieOf(login.POST(req(undefined, "POST", { barber_id: ids.b2, password: "1234" })));
     const own = await call<Barber[]>(barbers.GET(req(eddy)));
     expect(own.map((b) => b.id)).toEqual([ids.b2]);
@@ -96,13 +111,42 @@ describe("login e acesso", () => {
     );
     expect(a.barber_id).toBe(ids.b2);
 
-    await call(appointments.GET(req(eddy, "GET", undefined, "/api/appointments")), 403);
-    await call(appointment.DELETE(req(eddy, "DELETE"), ctx(a.id)), 403);
     await call(service.PATCH(req(eddy, "PATCH", { price: 1 }), ctx(corte!.id)), 403);
     await call(services.POST(req(eddy, "POST", { name: "X", price: 10 })), 403);
     await call(barber.PATCH(req(eddy, "PATCH", { name: "Chefe" }), ctx(ids.b2)), 403);
     await call(access.PUT(req(eddy, "PUT", { password: "9999" }), ctx(ids.b2)), 403);
     await call(access.DELETE(req(eddy, "DELETE"), ctx(ids.b3)), 403);
+    await call(push.POST(req(eddy, "POST", { endpoint: "https://push.test/eddy", keys: { p256dh: "a", auth: "b" } })), 403);
+    await call(appointment.DELETE(req(admin, "DELETE"), ctx(a.id)));
+  });
+
+  it("barbeiro vê, corrige e apaga só os próprios cortes", async () => {
+    const eddy = await cookieOf(login.POST(req(undefined, "POST", { barber_id: ids.b2, password: "1234" })));
+    const [corte, simples] = await call<Service[]>(services.GET(req(admin)));
+    const dele = await call<Appt>(appointments.POST(req(eddy, "POST", { service_id: simples!.id, payment_method: "dinheiro" })), 201);
+    const doAdmin = await call<Appt>(
+      appointments.POST(req(admin, "POST", { barber_id: ids.admin, service_id: corte!.id, payment_method: "pix" })),
+      201,
+    );
+
+    const hist = await call<Appt[]>(appointments.GET(req(eddy, "GET", undefined, "/api/appointments")));
+    expect(hist.map((x) => x.id)).toEqual([dele.id]);
+
+    // corrige serviço e pagamento: nome e preço vêm do banco
+    const fixed = await call<Appt>(
+      appointment.PATCH(req(eddy, "PATCH", { service_id: corte!.id, payment_method: "pix", barber_id: ids.admin }), ctx(dele.id)),
+    );
+    expect(fixed).toMatchObject({ service_name: "Corte", price: 30, payment_method: "pix", barber_id: ids.b2 });
+    await call(appointment.PATCH(req(eddy, "PATCH", {}), ctx(dele.id)), 400);
+    await call(appointment.PATCH(req(eddy, "PATCH", { payment_method: "cheque" }), ctx(dele.id)), 400);
+
+    // o do admin "não existe" para ele
+    await call(appointment.PATCH(req(eddy, "PATCH", { payment_method: "dinheiro" }), ctx(doAdmin.id)), 404);
+    await call(appointment.DELETE(req(eddy, "DELETE"), ctx(doAdmin.id)), 404);
+
+    await call(appointment.DELETE(req(eddy, "DELETE"), ctx(dele.id)));
+    expect(await call<Appt[]>(appointments.GET(req(eddy, "GET", undefined, "/api/appointments")))).toEqual([]);
+    await call(appointment.DELETE(req(admin, "DELETE"), ctx(doAdmin.id)));
   });
 
   it("remover acesso ou trocar senha derruba a sessão antiga", async () => {
@@ -180,5 +224,53 @@ describe("admin", () => {
 
     await call(appointment.DELETE(req(admin, "DELETE"), ctx(created.id)));
     await call(appointment.DELETE(req(admin, "DELETE"), ctx(created.id)), 404);
+  });
+});
+
+describe("notificações do administrador", () => {
+  const tick = () => new Promise((r) => setTimeout(r, 50));
+  beforeEach(() => {
+    sent.length = 0;
+  });
+
+  it("só o admin ativa; assinatura inválida é recusada; ativar manda teste", async () => {
+    await call(push.POST(req(admin, "POST", { endpoint: "http://inseguro", keys: { p256dh: "a", auth: "b" } })), 400);
+    await call(push.POST(req(admin, "POST", { endpoint: "https://push.test/dennis-celular", keys: { p256dh: "p", auth: "a" }, confirm: true })));
+    await call(push.POST(req(admin, "POST", { endpoint: "https://push.test/expirado", keys: { p256dh: "p", auth: "a" } })));
+    await tick();
+    expect(sent.map((x) => x.payload.title)).toEqual(["🔔 Notificações ativadas"]);
+  });
+
+  it("cada corte, correção e exclusão dos barbeiros chega ao admin; os do admin não", async () => {
+    await call(access.PUT(req(admin, "PUT", { password: "9876" }), ctx(ids.b3)));
+    const junior = await cookieOf(login.POST(req(undefined, "POST", { barber_id: ids.b3, password: "9876" })));
+    const [corte, simples] = await call<Service[]>(services.GET(req(admin)));
+
+    const a = await call<Appt>(appointments.POST(req(junior, "POST", { service_id: simples!.id, payment_method: "cartao" })), 201);
+    await tick();
+    expect(sent.map((x) => [x.endpoint, x.payload.title, x.payload.body])).toEqual([
+      ["https://push.test/dennis-celular", "✂️ Novo corte — Barbeiro 3", "Corte simples · R$ 25,00 · Cartão"],
+      ["https://push.test/expirado", "✂️ Novo corte — Barbeiro 3", "Corte simples · R$ 25,00 · Cartão"],
+    ]);
+
+    // aparelho que respondeu 410 saiu da lista
+    sent.length = 0;
+    await call(appointment.PATCH(req(junior, "PATCH", { service_id: corte!.id }), ctx(a.id)));
+    await tick();
+    expect(sent).toHaveLength(1);
+    expect(sent[0]!.payload.title).toBe("✏️ Barbeiro 3 corrigiu um corte");
+    expect(sent[0]!.payload.body).toContain("Antes: Corte simples");
+    expect(sent[0]!.payload.body).toContain("Agora: Corte · R$ 30,00");
+
+    sent.length = 0;
+    await call(appointment.DELETE(req(junior, "DELETE"), ctx(a.id)));
+    await tick();
+    expect(sent.map((x) => x.payload.title)).toEqual(["🗑️ Barbeiro 3 apagou um corte"]);
+
+    sent.length = 0;
+    const own = await call<Appt>(appointments.POST(req(admin, "POST", { barber_id: ids.admin, service_id: corte!.id, payment_method: "pix" })), 201);
+    await call(appointment.DELETE(req(admin, "DELETE"), ctx(own.id)));
+    await tick();
+    expect(sent).toEqual([]);
   });
 });

@@ -74,9 +74,22 @@ const SCHEMA_V2 = [
      AND NOT EXISTS (SELECT 1 FROM barbers WHERE role = 'admin')`,
 ];
 
+// Aparelhos do administrador que recebem notificação a cada corte; histórico por barbeiro.
+const SCHEMA_V3 = [
+  `CREATE TABLE IF NOT EXISTS push_subscriptions (
+    endpoint text PRIMARY KEY,
+    barber_id uuid NOT NULL REFERENCES barbers(id) ON DELETE CASCADE,
+    p256dh text NOT NULL,
+    auth text NOT NULL,
+    created_at timestamptz NOT NULL DEFAULT now()
+  )`,
+  `CREATE INDEX IF NOT EXISTS appointments_barber_idx ON appointments (barber_id, created_at DESC)`,
+];
+
 const MIGRATIONS = [
   { key: "schema_v1", statements: SCHEMA_V1 },
   { key: "schema_v2", statements: SCHEMA_V2 },
+  { key: "schema_v3", statements: SCHEMA_V3 },
 ];
 
 async function migrate(query: Query) {

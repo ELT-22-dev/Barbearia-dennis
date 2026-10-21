@@ -101,7 +101,7 @@ export function NewAppointment({ me }: { me: Me }) {
         </div>
       </Step>
 
-      <div className={`sticky ${isAdmin ? "bottom-20" : "bottom-4"} rounded-2xl border border-border bg-card p-4 shadow-soft md:bottom-6`}>
+      <div className="sticky bottom-20 rounded-2xl border border-border bg-card p-4 shadow-soft md:bottom-6">
         <div className="mb-3 flex justify-between text-sm text-muted-foreground">
           <span>
             {isAdmin ? "Barbeiro" : "Sua parte"} <strong className="text-foreground">{brl(split.barber)}</strong>

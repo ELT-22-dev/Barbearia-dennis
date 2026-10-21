@@ -2,18 +2,24 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BarChart3, LogOut, Plus, Scissors, Settings } from "lucide-react";
+import { BarChart3, History, LogOut, Plus, Scissors, Settings } from "lucide-react";
 import { useEffect, type ReactNode } from "react";
 import { toast } from "sonner";
 import { brl, PAYMENT_LABELS, type Appt, type PaymentMethod } from "@/lib/barber";
 import type { Me } from "@/lib/auth";
 import { api, notifyChanged, ownAppointments } from "@/lib/client";
+import { NotificationsBanner } from "./Notifications";
 
-const allItems = [
-  { href: "/", label: "Novo", icon: Plus, adminOnly: false },
-  { href: "/resumo", label: "Resumo", icon: BarChart3, adminOnly: true },
-  { href: "/ajustes", label: "Ajustes", icon: Settings, adminOnly: true },
-] as const;
+const adminItems = [
+  { href: "/", label: "Novo", icon: Plus },
+  { href: "/resumo", label: "Resumo", icon: BarChart3 },
+  { href: "/ajustes", label: "Ajustes", icon: Settings },
+];
+// Barbeiro: anotar corte e ver/corrigir os próprios.
+const barberItems = [
+  { href: "/", label: "Novo", icon: Plus },
+  { href: "/resumo", label: "Meus cortes", icon: History },
+];
 
 const POLL_MS = 15_000;
 
@@ -83,10 +89,10 @@ async function signOut() {
   window.location.replace("/login");
 }
 
-export function AppShell({ me, children }: { me: Me; children: ReactNode }) {
+export function AppShell({ me, vapidKey, children }: { me: Me; vapidKey: string | null; children: ReactNode }) {
   const pathname = usePathname();
   const isAdmin = me.role === "admin";
-  const items = allItems.filter((i) => isAdmin || !i.adminOnly);
+  const items = isAdmin ? adminItems : barberItems;
   useNewAppointmentAlerts(isAdmin);
 
   return (
@@ -115,32 +121,33 @@ export function AppShell({ me, children }: { me: Me; children: ReactNode }) {
         </div>
       </aside>
 
-      <div className={`flex-1 md:pb-0 ${items.length > 1 ? "pb-24" : "pb-8"}`}>
+      <div className="flex-1 pb-24 md:pb-0">
         <header className="flex items-center justify-between px-5 pt-5 md:hidden">
           <Brand />
           <button onClick={signOut} aria-label={`Sair (${me.name})`} className="flex items-center gap-1.5 text-sm text-muted-foreground">
             {me.name} <LogOut className="h-4 w-4" />
           </button>
         </header>
-        <main className="mx-auto w-full max-w-4xl px-5 py-6 md:px-10 md:py-10">{children}</main>
+        <main className="mx-auto w-full max-w-4xl px-5 py-6 md:px-10 md:py-10">
+          {isAdmin && pathname !== "/ajustes" && <NotificationsBanner vapidKey={vapidKey} />}
+          {children}
+        </main>
       </div>
 
-      {items.length > 1 && (
-        <nav className="fixed inset-x-0 bottom-0 z-20 flex border-t border-border bg-card/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden">
-          {items.map(({ href, label, icon: Icon }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`flex flex-1 flex-col items-center gap-1 py-3 text-xs font-medium ${
-                pathname === href ? "text-primary" : "text-muted-foreground"
-              }`}
-            >
-              <Icon className="h-5 w-5" />
-              {label}
-            </Link>
-          ))}
-        </nav>
-      )}
+      <nav className="fixed inset-x-0 bottom-0 z-20 flex border-t border-border bg-card/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden">
+        {items.map(({ href, label, icon: Icon }) => (
+          <Link
+            key={href}
+            href={href}
+            className={`flex flex-1 flex-col items-center gap-1 py-3 text-xs font-medium ${
+              pathname === href ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            <Icon className="h-5 w-5" />
+            {label}
+          </Link>
+        ))}
+      </nav>
     </div>
   );
 }

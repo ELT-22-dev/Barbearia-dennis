@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { parsePrice, type Barber, type Service } from "@/lib/barber";
 import type { Me } from "@/lib/auth";
 import { api, notifyChanged, useData } from "@/lib/client";
+import { NotificationsSettings } from "./Notifications";
 import { LoadError, Loading } from "./States";
 
 const field = "rounded-xl border border-input bg-card px-3 py-2.5 text-base outline-none focus:border-primary";
@@ -25,7 +26,7 @@ async function run(action: Promise<unknown>, msg = "Salvo") {
   }
 }
 
-export function Settings({ me }: { me: Me }) {
+export function Settings({ me, vapidKey }: { me: Me; vapidKey: string | null }) {
   const barbers = useData<Barber[]>("/api/barbers");
   const services = useData<Service[]>("/api/services");
   const [newName, setNewName] = useState("");
@@ -68,6 +69,8 @@ export function Settings({ me }: { me: Me }) {
   return (
     <div className="space-y-10">
       <h1 className="font-display text-3xl font-semibold tracking-tight">Ajustes</h1>
+
+      <NotificationsSettings vapidKey={vapidKey} />
 
       <section className="space-y-3">
         <h2 className="text-sm font-medium tracking-wider text-muted-foreground uppercase">Barbeiros</h2>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Summary } from "@/components/Summary";
 import { isPeriod } from "@/lib/barber";
-import { requirePageAdmin } from "@/lib/session";
+import { requirePageUser } from "@/lib/session";
 
 export const metadata: Metadata = {
   title: "Resumo",
@@ -9,7 +9,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Page({ searchParams }: { searchParams: Promise<{ p?: string | string[] }> }) {
-  await requirePageAdmin();
+  // Admin vê todos; barbeiro vê (e corrige) só os próprios cortes — filtrado na API.
+  const me = await requirePageUser();
   const { p } = await searchParams;
-  return <Summary period={isPeriod(p) ? p : "hoje"} />;
+  return <Summary me={me} period={isPeriod(p) ? p : "hoje"} />;
 }
