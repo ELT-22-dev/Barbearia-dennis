@@ -12,6 +12,8 @@ export async function api<T = unknown>(url: string, init?: { method?: string; bo
     cache: "no-store",
   });
   const data = await res.json().catch(() => null);
+  // Sessão expirou ou acesso foi removido: volta para o login.
+  if (res.status === 401 && window.location.pathname !== "/login") window.location.assign("/login");
   if (!res.ok) throw new Error((data as { error?: string } | null)?.error ?? `Erro ${res.status}`);
   return data as T;
 }

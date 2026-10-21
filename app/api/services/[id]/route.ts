@@ -1,3 +1,4 @@
+import { requireUser } from "@/lib/auth";
 import { parsePrice } from "@/lib/barber";
 import { sql } from "@/lib/db";
 import { handle, HttpError, readJson, text, uuid, type IdContext } from "@/lib/http";
@@ -5,6 +6,7 @@ import { handle, HttpError, readJson, text, uuid, type IdContext } from "@/lib/h
 const COLUMNS = `id, name, price::float8 AS price`;
 
 export const PATCH = handle(async (req: Request, { params }: IdContext) => {
+  await requireUser(req, "admin");
   const id = uuid((await params).id);
   const body = await readJson(req);
   const name = body.name === undefined ? null : text(body.name, "o nome do serviço");
@@ -24,7 +26,8 @@ export const PATCH = handle(async (req: Request, { params }: IdContext) => {
 });
 
 // Remoção lógica: lançamentos antigos guardam nome e preço, então nada se perde.
-export const DELETE = handle(async (_req: Request, { params }: IdContext) => {
+export const DELETE = handle(async (req: Request, { params }: IdContext) => {
+  await requireUser(req, "admin");
   const id = uuid((await params).id);
   const rows = await sql(`UPDATE services SET active = false WHERE id = $1 AND active RETURNING id`, [id]);
   if (!rows.length) throw new HttpError(404, "Serviço não encontrado");

@@ -19,9 +19,7 @@ async function connect(): Promise<Query> {
   return async (text, params = []) => (await db.query<Row>(text, params)).rows;
 }
 
-const SCHEMA_VERSION = "schema_v1";
-
-const SCHEMA = [
+const SCHEMA_V1 = [
   `CREATE TABLE IF NOT EXISTS app_meta (key text PRIMARY KEY)`,
   `CREATE TABLE IF NOT EXISTS barbers (
     id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -60,17 +58,39 @@ const SCHEMA = [
   INSERT INTO services (name, price)
   SELECT v.name, v.price FROM (VALUES ('Corte', 30.00), ('Corte simples', 25.00)) AS v(name, price)
   WHERE EXISTS (SELECT 1 FROM seed)`,
-  `INSERT INTO app_meta (key) VALUES ('${SCHEMA_VERSION}') ON CONFLICT DO NOTHING`,
+];
+
+// Acesso: cada barbeiro entra com a própria senha; um deles é o administrador (dono).
+// session_version sobe quando a senha muda ou o acesso é removido, derrubando sessões antigas.
+const SCHEMA_V2 = [
+  `ALTER TABLE barbers ADD COLUMN IF NOT EXISTS role text NOT NULL DEFAULT 'barber' CHECK (role IN ('admin', 'barber'))`,
+  `ALTER TABLE barbers ADD COLUMN IF NOT EXISTS password_hash text`,
+  `ALTER TABLE barbers ADD COLUMN IF NOT EXISTS session_version int NOT NULL DEFAULT 1`,
+  `ALTER TABLE barbers ADD COLUMN IF NOT EXISTS failed_logins int NOT NULL DEFAULT 0`,
+  `ALTER TABLE barbers ADD COLUMN IF NOT EXISTS locked_until timestamptz`,
+  // O Dennis é o dono; num banco sem ele, o primeiro barbeiro da lista.
+  `UPDATE barbers SET role = 'admin'
+   WHERE id = (SELECT id FROM barbers ORDER BY lower(name) = 'dennis' DESC, position, created_at LIMIT 1)
+     AND NOT EXISTS (SELECT 1 FROM barbers WHERE role = 'admin')`,
+];
+
+const MIGRATIONS = [
+  { key: "schema_v1", statements: SCHEMA_V1 },
+  { key: "schema_v2", statements: SCHEMA_V2 },
 ];
 
 async function migrate(query: Query) {
+  let done = new Set<string>();
   try {
-    const done = await query(`SELECT 1 FROM app_meta WHERE key = $1`, [SCHEMA_VERSION]);
-    if (done.length) return;
+    done = new Set((await query(`SELECT key FROM app_meta`)).map((r) => String(r.key)));
   } catch {
     // app_meta ainda não existe: banco novo.
   }
-  for (const statement of SCHEMA) await query(statement);
+  for (const { key, statements } of MIGRATIONS) {
+    if (done.has(key)) continue;
+    for (const statement of statements) await query(statement);
+    await query(`INSERT INTO app_meta (key) VALUES ($1) ON CONFLICT DO NOTHING`, [key]);
+  }
 }
 
 const g = globalThis as unknown as { __barbeariaDb?: Promise<Query> };

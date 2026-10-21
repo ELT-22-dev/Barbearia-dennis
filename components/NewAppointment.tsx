@@ -4,15 +4,18 @@ import { Banknote, CreditCard, QrCode } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { brl, PAYMENT_LABELS, splitPrice, type Appt, type Barber, type PaymentMethod, type Service } from "@/lib/barber";
+import type { Me } from "@/lib/auth";
 import { api, notifyChanged, ownAppointments, useData } from "@/lib/client";
 import { LoadError, Loading } from "./States";
 
 const payIcons = { dinheiro: Banknote, pix: QrCode, cartao: CreditCard };
 
-export function NewAppointment() {
+export function NewAppointment({ me }: { me: Me }) {
+  const isAdmin = me.role === "admin";
+  // Barbeiro só anota corte próprio: a API devolve só ele e já vem selecionado.
   const barbers = useData<Barber[]>("/api/barbers");
   const services = useData<Service[]>("/api/services");
-  const [barberId, setBarberId] = useState<string | null>(null);
+  const [barberId, setBarberId] = useState<string | null>(isAdmin ? null : me.id);
   const [serviceId, setServiceId] = useState<string | null>(null);
   const [payment, setPayment] = useState<PaymentMethod | null>(null);
   const [saving, setSaving] = useState(false);
@@ -98,10 +101,10 @@ export function NewAppointment() {
         </div>
       </Step>
 
-      <div className="sticky bottom-20 rounded-2xl border border-border bg-card p-4 shadow-soft md:bottom-6">
+      <div className={`sticky ${isAdmin ? "bottom-20" : "bottom-4"} rounded-2xl border border-border bg-card p-4 shadow-soft md:bottom-6`}>
         <div className="mb-3 flex justify-between text-sm text-muted-foreground">
           <span>
-            Barbeiro <strong className="text-foreground">{brl(split.barber)}</strong>
+            {isAdmin ? "Barbeiro" : "Sua parte"} <strong className="text-foreground">{brl(split.barber)}</strong>
           </span>
           <span>
             Barbearia <strong className="text-foreground">{brl(split.shop)}</strong>

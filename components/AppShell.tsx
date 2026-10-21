@@ -2,16 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BarChart3, Plus, Scissors, Settings } from "lucide-react";
+import { BarChart3, LogOut, Plus, Scissors, Settings } from "lucide-react";
 import { useEffect, type ReactNode } from "react";
 import { toast } from "sonner";
 import { brl, PAYMENT_LABELS, type Appt, type PaymentMethod } from "@/lib/barber";
+import type { Me } from "@/lib/auth";
 import { api, notifyChanged, ownAppointments } from "@/lib/client";
 
-const items = [
-  { href: "/", label: "Novo", icon: Plus },
-  { href: "/resumo", label: "Resumo", icon: BarChart3 },
-  { href: "/ajustes", label: "Ajustes", icon: Settings },
+const allItems = [
+  { href: "/", label: "Novo", icon: Plus, adminOnly: false },
+  { href: "/resumo", label: "Resumo", icon: BarChart3, adminOnly: true },
+  { href: "/ajustes", label: "Ajustes", icon: Settings, adminOnly: true },
 ] as const;
 
 const POLL_MS = 15_000;
@@ -33,9 +34,10 @@ function beep() {
   }
 }
 
-// Avisa (som + toast) quando outro aparelho registra um atendimento.
-function useNewAppointmentAlerts() {
+// Avisa o administrador (som + toast) quando outro aparelho registra um atendimento.
+function useNewAppointmentAlerts(enabled: boolean) {
   useEffect(() => {
+    if (!enabled) return;
     let after: string | null = null;
     let stopped = false;
     let timer: ReturnType<typeof setTimeout>;
@@ -73,12 +75,19 @@ function useNewAppointmentAlerts() {
       stopped = true;
       clearTimeout(timer);
     };
-  }, []);
+  }, [enabled]);
 }
 
-export function AppShell({ children }: { children: ReactNode }) {
+async function signOut() {
+  await fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
+  window.location.replace("/login");
+}
+
+export function AppShell({ me, children }: { me: Me; children: ReactNode }) {
   const pathname = usePathname();
-  useNewAppointmentAlerts();
+  const isAdmin = me.role === "admin";
+  const items = allItems.filter((i) => isAdmin || !i.adminOnly);
+  useNewAppointmentAlerts(isAdmin);
 
   return (
     <div className="min-h-screen bg-background md:flex">
@@ -98,29 +107,40 @@ export function AppShell({ children }: { children: ReactNode }) {
             </Link>
           ))}
         </nav>
+        <div className="mt-auto space-y-2 border-t border-border pt-4">
+          <p className="truncate text-sm font-medium">{me.name}</p>
+          <button onClick={signOut} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
+            <LogOut className="h-4 w-4" /> Sair
+          </button>
+        </div>
       </aside>
 
-      <div className="flex-1 pb-24 md:pb-0">
+      <div className={`flex-1 md:pb-0 ${items.length > 1 ? "pb-24" : "pb-8"}`}>
         <header className="flex items-center justify-between px-5 pt-5 md:hidden">
           <Brand />
+          <button onClick={signOut} aria-label={`Sair (${me.name})`} className="flex items-center gap-1.5 text-sm text-muted-foreground">
+            {me.name} <LogOut className="h-4 w-4" />
+          </button>
         </header>
         <main className="mx-auto w-full max-w-4xl px-5 py-6 md:px-10 md:py-10">{children}</main>
       </div>
 
-      <nav className="fixed inset-x-0 bottom-0 z-20 flex border-t border-border bg-card/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden">
-        {items.map(({ href, label, icon: Icon }) => (
-          <Link
-            key={href}
-            href={href}
-            className={`flex flex-1 flex-col items-center gap-1 py-3 text-xs font-medium ${
-              pathname === href ? "text-primary" : "text-muted-foreground"
-            }`}
-          >
-            <Icon className="h-5 w-5" />
-            {label}
-          </Link>
-        ))}
-      </nav>
+      {items.length > 1 && (
+        <nav className="fixed inset-x-0 bottom-0 z-20 flex border-t border-border bg-card/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden">
+          {items.map(({ href, label, icon: Icon }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`flex flex-1 flex-col items-center gap-1 py-3 text-xs font-medium ${
+                pathname === href ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              <Icon className="h-5 w-5" />
+              {label}
+            </Link>
+          ))}
+        </nav>
+      )}
     </div>
   );
 }

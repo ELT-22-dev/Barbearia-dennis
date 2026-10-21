@@ -9,7 +9,8 @@ export const PAYMENT_LABELS: Record<PaymentMethod, string> = {
 export const isPaymentMethod = (v: unknown): v is PaymentMethod =>
   typeof v === "string" && v in PAYMENT_LABELS;
 
-export type Barber = { id: string; name: string; position: number };
+// role/has_access só vêm para o administrador.
+export type Barber = { id: string; name: string; position: number; role?: "admin" | "barber"; has_access?: boolean };
 export type Service = { id: string; name: string; price: number };
 export type Appt = {
   id: string;

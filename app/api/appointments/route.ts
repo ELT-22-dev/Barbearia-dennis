@@ -1,3 +1,4 @@
+import { requireUser } from "@/lib/auth";
 import { isPaymentMethod } from "@/lib/barber";
 import { sql } from "@/lib/db";
 import { handle, HttpError, readJson, uuid } from "@/lib/http";
@@ -17,7 +18,9 @@ function timestamp(v: string | null, what: string) {
 // ?since=ISO  → lançamentos a partir do início do período (Resumo)
 // ?after=ISO  → só os mais novos que esse instante (aviso de novos atendimentos)
 // ?limit=N    → no máximo N, dos mais recentes
+// Histórico: só o administrador.
 export const GET = handle(async (req: Request) => {
+  await requireUser(req, "admin");
   const q = new URL(req.url).searchParams;
   const since = timestamp(q.get("since"), "since");
   const after = timestamp(q.get("after"), "after");
@@ -34,9 +37,11 @@ export const GET = handle(async (req: Request) => {
 });
 
 // Nome do barbeiro e preço vêm do banco, não do aparelho.
+// Barbeiro só registra corte em nome próprio; o admin escolhe o barbeiro.
 export const POST = handle(async (req: Request) => {
+  const me = await requireUser(req);
   const body = await readJson(req);
-  const barberId = uuid(body.barber_id, "Barbeiro");
+  const barberId = me.role === "admin" ? uuid(body.barber_id, "Barbeiro") : me.id;
   const serviceId = uuid(body.service_id, "Serviço");
   if (!isPaymentMethod(body.payment_method)) throw new HttpError(400, "Forma de pagamento inválida");
   const rows = await sql(

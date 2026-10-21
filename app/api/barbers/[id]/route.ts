@@ -1,7 +1,9 @@
+import { requireUser } from "@/lib/auth";
 import { sql } from "@/lib/db";
 import { handle, HttpError, readJson, text, uuid, type IdContext } from "@/lib/http";
 
 export const PATCH = handle(async (req: Request, { params }: IdContext) => {
+  await requireUser(req, "admin");
   const id = uuid((await params).id);
   const body = await readJson(req);
   const name = text(body.name, "o nome");

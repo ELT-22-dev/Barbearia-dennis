@@ -4,6 +4,7 @@ import { Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { parsePrice, type Barber, type Service } from "@/lib/barber";
+import type { Me } from "@/lib/auth";
 import { api, notifyChanged, useData } from "@/lib/client";
 import { LoadError, Loading } from "./States";
 
@@ -24,7 +25,7 @@ async function run(action: Promise<unknown>, msg = "Salvo") {
   }
 }
 
-export function Settings() {
+export function Settings({ me }: { me: Me }) {
   const barbers = useData<Barber[]>("/api/barbers");
   const services = useData<Service[]>("/api/services");
   const [newName, setNewName] = useState("");
@@ -84,6 +85,18 @@ export function Settings() {
       </section>
 
       <section className="space-y-3">
+        <h2 className="text-sm font-medium tracking-wider text-muted-foreground uppercase">Acesso</h2>
+        <p className="text-sm text-muted-foreground">
+          Quem tem acesso entra com o próprio nome e senha e só consegue anotar os próprios cortes.
+        </p>
+        <div className="space-y-3">
+          {barbers.data.map((b) => (
+            <AccessRow key={`${b.id}:${b.has_access}`} barber={b} isSelf={b.id === me.id} />
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-3">
         <h2 className="text-sm font-medium tracking-wider text-muted-foreground uppercase">Serviços e preços (R$)</h2>
         <div className="space-y-2">
           {services.data.map((s) => (
@@ -131,6 +144,73 @@ export function Settings() {
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+function AccessRow({ barber, isSelf }: { barber: Barber; isSelf: boolean }) {
+  const [password, setPassword] = useState("");
+  const [busy, setBusy] = useState(false);
+  const status = barber.role === "admin" ? "Administrador" : barber.has_access ? "Com acesso" : "Sem acesso";
+
+  const save = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password.length < 4) {
+      toast.error("A senha precisa ter pelo menos 4 caracteres");
+      return;
+    }
+    setBusy(true);
+    const msg = isSelf ? "Sua senha foi trocada" : `Senha salva. Passe a senha para ${barber.name}.`;
+    if (await run(api(`/api/barbers/${barber.id}/access`, { method: "PUT", body: { password } }), msg)) setPassword("");
+    setBusy(false);
+  };
+
+  const revoke = async () => {
+    if (!confirm(`Remover o acesso de ${barber.name}? Ele sai do app na hora.`)) return;
+    setBusy(true);
+    await run(api(`/api/barbers/${barber.id}/access`, { method: "DELETE" }), "Acesso removido");
+    setBusy(false);
+  };
+
+  return (
+    <div className="rounded-2xl border border-border bg-card p-4">
+      <div className="flex items-center justify-between gap-3">
+        <p className="font-medium">
+          {barber.name}
+          {isSelf && <span className="text-muted-foreground"> (você)</span>}
+        </p>
+        <span
+          className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${
+            barber.has_access ? "bg-secondary text-foreground" : "border border-border text-muted-foreground"
+          }`}
+        >
+          {status}
+        </span>
+      </div>
+      <form onSubmit={save} className="mt-3 flex flex-wrap gap-2">
+        <input
+          aria-label={`Nova senha de ${barber.name}`}
+          type={isSelf ? "password" : "text"}
+          autoComplete={isSelf ? "new-password" : "off"}
+          placeholder={isSelf ? "Nova senha (mín. 4)" : "Senha (mín. 4)"}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className={`w-full min-w-0 sm:w-auto sm:flex-1 ${field}`}
+        />
+        <button disabled={busy} className="rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-50">
+          {isSelf ? "Trocar minha senha" : barber.has_access ? "Trocar senha" : "Dar acesso"}
+        </button>
+        {!isSelf && barber.has_access && (
+          <button
+            type="button"
+            disabled={busy}
+            onClick={revoke}
+            className="rounded-xl px-3 py-2.5 text-sm text-muted-foreground hover:bg-secondary hover:text-destructive disabled:opacity-50"
+          >
+            Remover acesso
+          </button>
+        )}
+      </form>
     </div>
   );
 }
